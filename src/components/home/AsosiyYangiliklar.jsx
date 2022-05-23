@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import hokimImg from "../images/hokim.png"
-import image from "../images/dolzarb.jpg"
+import hokimImg from "../../images/hokim.png"
+import image from "../../images/dolzarb.jpg"
 
 import Zoom from 'react-reveal/Zoom';
 
