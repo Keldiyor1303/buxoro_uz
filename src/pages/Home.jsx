@@ -9,6 +9,7 @@ import Sektorlar from '../components/home/Sektorlar';
 import Tuzilishi from '../components/home/Tuzilishi';
 import Yangiliklar from '../components/home/Yangiliklar';
 import Yunalishlar from '../components/home/Yunalishlar';
+import Homiylar from '../components/home/Homiylar';
 
 const Home = () => {
     return (
@@ -25,6 +26,8 @@ const Home = () => {
 
             <Tuzilishi />
             <Aloqa />
+            <Homiylar />
+
             <Footer />
         </Wrapper>
     );

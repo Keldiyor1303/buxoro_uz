@@ -59,6 +59,7 @@ const Yunalishlar = () => {
         autoplay: true,
         loop: true,
         autoplayTimeout: 3000,
+        autoplayHoverPause: true,
         responsive: {
             0: {
                 items: 1
