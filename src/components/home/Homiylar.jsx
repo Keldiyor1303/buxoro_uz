@@ -5,6 +5,9 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import image from "../../images/ziyonet.png"
+import x1 from "../../images/x1.svg"
+import x2 from "../../images/x2.svg"
+import x3 from "../../images/x3.jpg"
 
 const Homiylar = () => {
     const data = [
@@ -14,19 +17,19 @@ const Homiylar = () => {
             name: "Ziyonet ta`lim portali"
         },
         {
-            id: 1,
-            image: image,
-            name: "Ziyonet ta`lim portali"
+            id: 2,
+            image: x1,
+            name: "Yagona interaktiv davlat xizmatlari portaliga"
         },
         {
             id: 1,
-            image: image,
-            name: "Ziyonet ta`lim portali"
+            image: x2,
+            name: "Yagona interaktiv davlat xizmatlari portaliga"
         },
         {
             id: 1,
-            image: image,
-            name: "Ziyonet ta`lim portali"
+            image: x3,
+            name: "Mustaqil O`zbekiston solnomasi"
         },
         {
             id: 1,

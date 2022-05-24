@@ -22,12 +22,15 @@ const Navbar = () => {
                     <ul className="navbar-nav">
 
                         <li className="nav-item dropdown">
-                            <NavLink to="/" className="navbar-nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</NavLink>
+                            <span className="navbar-nav-link dropdown-toggle" data-toggle="dropdown">VILOYAT HAQIDA</span>
                             <div className="dropdown-menu dropdown-menu-left">
-                                <NavLink to="/" className="dropdown-item">Action</NavLink>
-                                <NavLink to="/" className="dropdown-item">Another action</NavLink>
-                                <NavLink to="/" className="dropdown-item">Something else here</NavLink>
-                                <NavLink to="/" className="dropdown-item">One more line</NavLink>
+                                <NavLink to="/umumiy_malumot" className="dropdown-item">UMUMIY MA'LUMOT</NavLink>
+                                <NavLink to="/konstitutsiya" className="dropdown-item">O'ZBEKISTON RESPUBLIKASI KONSTITUTSIYASI</NavLink>
+                                <NavLink to="/davlat_ramzlari" className="dropdown-item">DAVLAT RAMZLARI</NavLink>
+                                <NavLink to="/milliy_bayramlar" className="dropdown-item">MILLIY BAYRAMLAR</NavLink>
+                                <NavLink to="/milliy_valyuta" className="dropdown-item">MILLIY VALYUTA</NavLink>
+                                <NavLink to="/davlat_mukofotlari" className="dropdown-item">DAVLAT MUKOFOTLARI</NavLink>
+                                <NavLink to="/hududi_va_aholisi" className="dropdown-item">HUDUDI VA AHOLI</NavLink>
                             </div>
                         </li>
 
@@ -125,11 +128,11 @@ const Navbar = () => {
 export default Navbar;
 
 const Wrapper = styled.header`
-    ul a {
+    ul a, ul span {
         color: #808080;
     }
 
-    ul a:hover, ul a:focus {
+    ul a:hover, ul a:focus, ul span:hover, ul span:focus  {
         color: #2196F3;;
         font-weight: 500;
     }

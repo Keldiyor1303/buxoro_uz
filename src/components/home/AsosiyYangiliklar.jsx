@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import hokimImg from "../../images/hokim.png"
-import image from "../../images/dolzarb.jpg"
+import d1 from "../../images/dolzarb.jpg"
+import d2 from "../../images/d2.jpg"
+import d3 from "../../images/d3.jpg"
 
 import Zoom from 'react-reveal/Zoom';
 
@@ -46,7 +48,7 @@ const AsosiyYangiliklar = () => {
                         <div className="boxes">
                             <Zoom bottom>
                                 <div className="position-relative rounded box" style={{ height: "400px" }}>
-                                    <img src={image} alt="" className="box-img" />
+                                    <img src={d1} alt="" className="box-img" />
                                     <div className='paragraf'>
                                         <p className="text-light p-1">
                                             18 yillik umr kushandasi yoki millionlab insonlarni kishanlagan odat</p>
@@ -57,7 +59,7 @@ const AsosiyYangiliklar = () => {
                             <Zoom right>
 
                                 <div className='position-relative rounded box'>
-                                    <img src={image} alt="" className="box-img" />
+                                    <img src={d2} alt="" className="box-img" />
                                     <div className='paragraf'>
                                         <p className="text-light p-1">
                                             18 yillik umr kushandasi yoki millionlab insonlarni kishanlagan odat</p>
@@ -65,7 +67,7 @@ const AsosiyYangiliklar = () => {
                                 </div>
 
                                 <div className='position-relative rounded box'>
-                                    <img src={image} alt="" className="box-img" />
+                                    <img src={d3} alt="" className="box-img" />
                                     <div className='paragraf'>
                                         <p className="text-light p-1">
                                             18 yillik umr kushandasi yoki millionlab insonlarni kishanlagan odat</p>
