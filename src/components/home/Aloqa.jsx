@@ -62,28 +62,28 @@ const Aloqa = () => {
                     <div className="px-3">
                         <div className="form-check mt-3" style={{ fontSize: "18px" }}>
                             <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
-                                style={{ width: "30px", height: "20px" }} />
+                                style={{ width: "20px", height: "20px" }} />
                             <label className="form-check-label" for="flexRadioDefault1" >
                                 A'lo
                             </label>
                         </div>
                         <div className="form-check mt-3" style={{ fontSize: "18px" }}>
                             <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
-                                style={{ width: "30px", height: "20px" }} />
+                                style={{ width: "20px", height: "20px" }} />
                             <label className="form-check-label" for="flexRadioDefault1">
                                 Yaxshi
                             </label>
                         </div>
                         <div className="form-check mt-3" style={{ fontSize: "18px" }}>
                             <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
-                                style={{ width: "30px", height: "20px" }} />
+                                style={{ width: "20px", height: "20px" }} />
                             <label className="form-check-label" for="flexRadioDefault1">
                                 Qoniqarli
                             </label>
                         </div>
                         <div className="form-check mt-3" style={{ fontSize: "18px" }}>
                             <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
-                                style={{ width: "30px", height: "20px" }} />
+                                style={{ width: "20px", height: "20px" }} />
                             <label className="form-check-label" for="flexRadioDefault1">
                                 Qoniqarsiz
                             </label>

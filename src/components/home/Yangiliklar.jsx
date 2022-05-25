@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import image from "../../images/1.jpg";
 
-import image from "../../images/1.jpg"
+import Zoom from 'react-reveal/Zoom';
+
 
 const Yangiliklar = () => {
 
@@ -35,41 +37,47 @@ const Yangiliklar = () => {
     return (
         <Wrapper>
             <div className="px-3 mt-3 mt-lg-3 mt-xl-0">
-                <div className="p-2 text-light rounded bg-primary" style={{ fontSize: "18px" }}>Yangiliklar</div>
+                <Zoom bottom>
+                    <div>
+                        <div className="p-2 text-light rounded bg-primary" style={{ fontSize: "18px" }}>Yangiliklar</div>
+                    </div>
+                </Zoom>
 
                 <div className="row pt-3">
+                    <Zoom cascade bottom>
 
-                    {
-                        data.map(({ id, image, date, title }) => {
-                            return (
-                                <div key={id} className="col-xl-3 col-md-6">
+                        {
+                            data.map(({ id, image, date, title }) => {
+                                return (
+                                    <div key={id} className="col-xl-3 col-md-6">
 
-                                    <div className="card card-hover">
-                                        <div className="card-img-actions">
-                                            <div className="img-scale">
-                                                <img className="img-fluid img-fluid-hover" src={image}
-                                                    alt="" />
+                                        <div className="card card-hover">
+                                            <div className="card-img-actions">
+                                                <div className="img-scale">
+                                                    <img className="img-fluid img-fluid-hover" src={image}
+                                                        alt="" />
+                                                </div>
+
+                                            </div>
+                                            <div className="card-body py-2">
+                                                <h5 className="card-title text-primary font-weight-bold">{date}</h5>
+                                                <p className="card-text card-text-title"> {title} </p>
                                             </div>
 
-                                        </div>
-                                        <div className="card-body py-2">
-                                            <h5 className="card-title text-primary font-weight-bold">{date}</h5>
-                                            <p className="card-text card-text-title"> {title} </p>
+                                            <div className="card-footer d-flex justify-content-end p-2 px-2">
+                                                <span className="text-primary font-weight-semybold"> Batafsil
+                                                    <i className="icon-arrow-right8"></i></span>
+                                            </div>
                                         </div>
 
-                                        <div className="card-footer d-flex justify-content-end p-2 px-2">
-                                            <span className="text-primary font-weight-semybold"> Batafsil
-                                                <i className="icon-arrow-right8"></i></span>
-                                        </div>
                                     </div>
-
-                                </div>
-                            )
-                        })
-                    }
+                                )
+                            })
+                        }
+                    </Zoom>
                 </div>
             </div>
-        </Wrapper>
+        </Wrapper >
     );
 }
 

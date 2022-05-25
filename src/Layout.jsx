@@ -10,8 +10,8 @@ const Layout = ({ children }) => {
             <Navbar />
 
             <main className='p-3'>
-                <LeftPanel />
                 {children}
+                <LeftPanel />
             </main>
 
             <Footer />
@@ -26,7 +26,7 @@ const Wrapper = styled.div`
 
     main {
         display: grid;
-        grid-template-columns: 3fr 9fr;
+        grid-template-columns: 9fr 3fr;
         gap: 16px;
     }
     

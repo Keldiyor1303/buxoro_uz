@@ -9,81 +9,68 @@ const HududiVaAholisi = () => {
     const data = [
         {
             name: 'Buxoro shahar',
-            uv: 4000,
-            pv: 2400,
-            amt: 2400,
+            "Hudud maydoni": 4000,
+            "Hudud aholisi": 2400,
         },
         {
             name: 'Buxoro shahar',
-            uv: 3000,
-            pv: 1398,
-            amt: 2210,
+            "Hudud maydoni": 3000,
+            "Hudud aholisi": 1398,
         },
         {
             name: 'Buxoro shahar',
-            uv: 2000,
-            pv: 9800,
-            amt: 2290,
+            "Hudud maydoni": 2000,
+            "Hudud aholisi": 9800,
         },
         {
             name: 'Buxoro shahar',
-            uv: 2780,
-            pv: 3908,
-            amt: 2000,
+            "Hudud maydoni": 2780,
+            "Hudud aholisi": 3908,
         },
         {
             name: 'Buxoro shahar',
-            uv: 1890,
-            pv: 4800,
-            amt: 2181,
+            "Hudud maydoni": 1890,
+            "Hudud aholisi": 4800,
         },
         {
             name: 'Buxoro shahar',
-            uv: 2390,
-            pv: 3800,
-            amt: 2500,
+            "Hudud maydoni": 2390,
+            "Hudud aholisi": 3800,
         },
         {
             name: 'Buxoro shahar',
-            uv: 3490,
-            pv: 4300,
-            amt: 2100,
+            "Hudud maydoni": 3490,
+            "Hudud aholisi": 4300,
         },
         {
             name: 'Buxoro shahar',
-            uv: 4000,
-            pv: 2400,
-            amt: 2400,
+            "Hudud maydoni": 4000,
+            "Hudud aholisi": 2400,
         },
         {
             name: 'Buxoro shahar',
-            uv: 3000,
-            pv: 1398,
-            amt: 2210,
+            "Hudud maydoni": 3000,
+            "Hudud aholisi": 1398,
         },
         {
             name: 'Buxoro shahar',
-            uv: 2000,
-            pv: 9800,
-            amt: 2290,
+            "Hudud maydoni": 2000,
+            "Hudud aholisi": 9800,
         },
         {
             name: 'Buxoro shahar',
-            uv: 2780,
-            pv: 3908,
-            amt: 2000,
+            "Hudud maydoni": 2780,
+            "Hudud aholisi": 3908,
         },
         {
             name: 'Buxoro shahar',
-            uv: 1890,
-            pv: 4800,
-            amt: 2181,
+            "Hudud maydoni": 1890,
+            "Hudud aholisi": 4800,
         },
         {
             name: 'Buxoro shahar',
-            uv: 2390,
-            pv: 3800,
-            amt: 2500,
+            "Hudud maydoni": 2390,
+            "Hudud aholisi": 3800,
         },
     ];
 
@@ -134,39 +121,36 @@ const HududiVaAholisi = () => {
                             Buxoro viloyati — Oʻzbekiston viloyatlari ichida, chegasining kattaligi boʻyicha Navoiy viloyatidan keyin ikkinchi oʻrinda turadi. Buxoro viloyati hududi asosan Qizilqum cho‘lida joylashgan. Janubi-sharqini Zarafshon vodiysi egallagan. Shimoli-gʻarbda Xorazm viloyati va Qoraqalpog‘iston Respublikasi, shimol va sharqdan Navoiy viloyati, janubi-sharqda Qashqadaryo viloyati, janubi-gʻarbda Turkmaniston bilan chegaradosh. Buxoro viloyati tarkibida 11 qishloq tumani: Buxoro, Vobkent, Jondor, Kogon, Olot, Peshku, Romitan, Shofirkon, Qorovulbozor, Qorako‘l, G‘ijduvon, 11 shahar (Buxoro, Galaosiyo, Vobkent, Gazli, Kogon, Olot, Romitan, Shofirkon, Qorako‘l, Qorovulbozor, G‘ijduvon), 3 shaharcha (Jondor, Zafarobod, Yangibozor), 121 qishloq fuqarolari yig‘ini bor. Buxoro shahar aholisining etnik tarkibi asosan o`zbek, rus, fors (eroniylar), turkman, tojik, ukrain, koreys, tatar va boshqalar tashkil etadi.</p>
                     </div>
 
-                    <div className="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
-
-                        <div className="mt-2 mt-sm-0 ml-auto">
-                            <a href="/">Batafsil <i className="icon-arrow-right8"></i></a>
-                        </div>
+                    <div style={{ width: "100%", height: "600px" }} >
+                        <ResponsiveContainer width="100%" height="100%">
+                            <BarChart
+                                width={500}
+                                height={300}
+                                data={data}
+                                margin={{
+                                    top: 20,
+                                    right: 30,
+                                    left: 20,
+                                    bottom: 40,
+                                }}
+                            >
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <XAxis dataKey="name" opacity={0} />
+                                <YAxis yAxisId="left" orientation="left" stroke="#2196F3" />
+                                <YAxis yAxisId="right" orientation="right" stroke="#345768" />
+                                <Tooltip />
+                                <Legend />
+                                <Bar yAxisId="left" dataKey="Hudud maydoni" fill="#2196F3" />
+                                <Bar yAxisId="right" dataKey="Hudud aholisi" fill="#345768" />
+                            </BarChart>
+                        </ResponsiveContainer>
                     </div>
+
+
                 </div>
             </div>
 
-            <div style={{ width: "100%", height: "600px" }}>
-                <ResponsiveContainer width="100%" height="100%">
-                    <BarChart
-                        width={500}
-                        height={300}
-                        data={data}
-                        margin={{
-                            top: 20,
-                            right: 30,
-                            left: 20,
-                            bottom: 5,
-                        }}
-                    >
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" opacity={0} />
-                        <YAxis yAxisId="left" orientation="left" stroke="#8884d8" />
-                        <YAxis yAxisId="right" orientation="right" stroke="#82ca9d" />
-                        <Tooltip />
-                        <Legend />
-                        <Bar yAxisId="left" dataKey="pv" fill="#8884d8" />
-                        <Bar yAxisId="right" dataKey="uv" fill="#82ca9d" />
-                    </BarChart>
-                </ResponsiveContainer>
-            </div>
+
         </Wrapper>
     );
 }
