@@ -14,11 +14,10 @@ const Konstitutsiya = () => {
                         <div className="card-img-actions mr-sm-3 mb-sm-0">
                             <a href="#course_preview" data-toggle="modal">
                                 <img src={konstitutsiya} className="img-fluid card-img" alt="konstitutsiya" style={{ width: "400px", height: "300px", objectFit: "cover" }} />
-                                {/* <span className="card-img-actions-overlay card-img"><i className="icon-play3 icon-2x"></i></span> */}
                             </a>
                         </div>
 
-                        <div className="">
+                        <div>
                             <h2 className="text-success m-0 p-0">O‘ZBEKISTON RESPUBLIKASINING KONSTITUTSIYASI</h2>
 
                             <p style={{ fontSize: "18px" }}>MUQADDIMA</p>
