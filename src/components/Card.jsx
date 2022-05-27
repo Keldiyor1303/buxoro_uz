@@ -5,22 +5,22 @@ import image from "../images/navruz.jpg"
 
 const Card = () => {
 
-    // const data = [
-    //     {
-    //         id: 1,
-    //         image: image,
-    //         name: "Navruz bayrami",
-    //         date: "21-mart",
-    //         title: "O‘zbekistonda Navro‘z bayrami mamlakatdagi eng sevimli, rang-barang va qiziqarli bayramlardan biridir. U 21 mart kuni, kunduzi va qorong'uligi teng bo'lgan bahorgi tengkunlik kuni nishonlanadi. Uning tarixini uch ming yildan ko'proq vaqt oldin Eron shimoli-sharqidagi Xuroson viloyatiga borib taqalsa bo'ladi va u yerdan G'arbiy va Markaziy Osiyoga tarqaldi."
-    //     },
-    //     {
-    //         id: 1,
-    //         image: image,
-    //         name: "Navruz bayrami",
-    //         date: "21-mart",
-    //         title: "O‘zbekistonda Navro‘z bayrami mamlakatdagi eng sevimli, rang-barang va qiziqarli bayramlardan biridir. U 21 mart kuni, kunduzi va qorong'uligi teng bo'lgan bahorgi tengkunlik kuni nishonlanadi. Uning tarixini uch ming yildan ko'proq vaqt oldin Eron shimoli-sharqidagi Xuroson viloyatiga borib taqalsa bo'ladi va u yerdan G'arbiy va Markaziy Osiyoga tarqaldi."
-    //     }
-    // ]
+    const data = [
+        {
+            id: 1,
+            image: image,
+            name: "Navruz bayrami",
+            date: "21-mart",
+            title: "O‘zbekistonda Navro‘z bayrami mamlakatdagi eng sevimli, rang-barang va qiziqarli bayramlardan biridir. U 21 mart kuni, kunduzi va qorong'uligi teng bo'lgan bahorgi tengkunlik kuni nishonlanadi. Uning tarixini uch ming yildan ko'proq vaqt oldin Eron shimoli-sharqidagi Xuroson viloyatiga borib taqalsa bo'ladi va u yerdan G'arbiy va Markaziy Osiyoga tarqaldi."
+        },
+        {
+            id: 1,
+            image: image,
+            name: "Navruz bayrami",
+            date: "21-mart",
+            title: "O‘zbekistonda Navro‘z bayrami mamlakatdagi eng sevimli, rang-barang va qiziqarli bayramlardan biridir. U 21 mart kuni, kunduzi va qorong'uligi teng bo'lgan bahorgi tengkunlik kuni nishonlanadi. Uning tarixini uch ming yildan ko'proq vaqt oldin Eron shimoli-sharqidagi Xuroson viloyatiga borib taqalsa bo'ladi va u yerdan G'arbiy va Markaziy Osiyoga tarqaldi."
+        }
+    ]
 
     return (
         <Wrapper>

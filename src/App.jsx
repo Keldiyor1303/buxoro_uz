@@ -53,6 +53,8 @@ import HududiyImportTahlili from "./containers/mahalliylashtirish/HududiyImportT
 import Murojaat from "./containers/Murojaat";
 import YoshlarSektori from "./containers/YoshlarSektori";
 import KorrupsiyagaQarshiKurashish from "./containers/KorrupsiyagaQarshiKurashish";
+import Navbar2 from "./components/Navbar2";
+import DavlatMukofotlari from "./containers/viloyatHaqida/DavlatMukofotlari";
 
 function App() {
   return (
@@ -65,6 +67,7 @@ function App() {
       <Route path="/davlat_ramzlari" element={<Layout> <DavlatRamzlari /> </Layout>} />
       <Route path="/milliy_bayramlar" element={<Layout> <MilliyBayramlar /> </Layout>} />
       <Route path="/milliy_valyuta" element={<Layout> <MilliyValyuta /> </Layout>} />
+      <Route path="/davlat_mukofotlari" element={<Layout> <DavlatMukofotlari /> </Layout>} />
       <Route path="/hududi_va_aholisi" element={<Layout> <HududiVaAholisi /> </Layout>} />
 
       {/* HOKIMLIK TO`G`RISIDA */}
@@ -116,7 +119,7 @@ function App() {
       <Route path="/akkreditatsiya" element={<Layout> <Akkreditatsiya /> </Layout>} />
 
       {/* MAHALLIYLASHTIRISH */}
-      <Route path="/qonunchilik" element={<Layout> <Qonunchilik2 /> </Layout>} />
+      <Route path="/mahalliy_qonunchilik" element={<Layout> <Qonunchilik2 /> </Layout>} />
       <Route path="/statistik_hisobotlar" element={<Layout> <StatistikHisobotlar /> </Layout>} />
       <Route path="/hududiy_import_tahlili" element={<Layout> <HududiyImportTahlili /> </Layout>} />
 
@@ -134,6 +137,7 @@ function App() {
 
       <Route path="/1" element={<Layout> <YangilikDetail /> </Layout>} />
       <Route path="/2" element={<Layout> <Card /> </Layout>} />
+      <Route path="/3" element={<Layout> <Navbar2 /> </Layout>} />
     </Routes>
   );
 }

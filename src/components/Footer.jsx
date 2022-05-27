@@ -14,14 +14,14 @@ const Footer = () => {
                         <div className="col-md-6 col-lg-4 col-xl-3 mb-4" style={{ textAlign: "left" }}>
                             <div className="d-flex align-items-center mb-2">
                                 <img src={logo} alt="logo" style={{ height: "80px" }} className="logo mr-2" />
-                                <h4 className="text-uppercase fw-bold m-0" style={{ fontWeight: "600" }}>BUXORO <br /> VILOYATI <br />
+                                <h4 className="text-uppercase fw-bold m-0" style={{ fontWeight: "600" }}>BUXORO VILOYATI <br />
                                     HOKIMLIGI
                                 </h4>
                             </div>
                             <p>
-                                Buxoro viloyat hokimligi <br /> rasmiy-veb sayti <br />
-                                {/* Buxoro shahri, I.Karimov ko'chasi <br />
-                                51-uy */}
+                                <strong>Buxoro viloyat hokimligi <br /> rasmiy-veb sayti </strong> <br />
+                                Buxoro shahri, I.Karimov ko'chasi <br />
+                                51-uy
                             </p>
                         </div>
 

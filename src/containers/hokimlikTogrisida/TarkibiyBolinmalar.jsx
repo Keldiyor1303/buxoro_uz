@@ -194,20 +194,24 @@ const TarkibiyBolinmalar = () => {
         setData(faceData)
     }
 
-
-
-    function show4(element) {
+    function show4(element, user) {
         const faceData = data?.filter((item) => {
 
-            item?.users.filter((item2) => {
-                if (item2.id === element?.users?.id) {
-                    item2.isShow4 = !element?.users?.isShow4
-                }
-                return item2
-            })
+            if (element.id === item.id) {
+
+                item?.users.map((item2) => {
+                    if (item2.id === user?.id) {
+                        item2.isShow4 = !user?.isShow4
+                    }
+                    return item2
+                })
+            }
 
             return item
         })
+
+        console.log(data);
+        console.log(faceData);
 
         setData(faceData)
     }
@@ -283,7 +287,7 @@ const TarkibiyBolinmalar = () => {
                                                             </div>
                                                         </div>
 
-                                                        <h2 onClick={() => show4(element)} className='text-secondary mx-3 mt-2' style={{ cursor: "pointer" }}>{item.isShow4 ? <i className='icon-arrow-down15'></i> : <i className='icon-arrow-right15'></i>}Funksiya va vazifalari</h2>
+                                                        <h2 onClick={() => show4(element, item)} className='text-secondary mx-3 mt-2' style={{ cursor: "pointer" }}>{item.isShow4 ? <i className='icon-arrow-down15'></i> : <i className='icon-arrow-right15'></i>}Funksiya va vazifalari</h2>
 
                                                         {item.isShow4 && <Zoom>
                                                             <div className="list-feed mx-3 ">
