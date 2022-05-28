@@ -7,6 +7,10 @@ import s1 from "../../images/s1.jpg"
 import s2 from "../../images/s2.jpg"
 import { Zoom } from 'react-reveal';
 
+
+// import oldiTomon from "../../images/100-1.png"
+// import orqaTomon from "../../images/100-2.png"
+
 const data1 = [
     {
         id: 0,
@@ -283,6 +287,129 @@ const TarkibiyBolinmalar = () => {
                                                                         <span>Telefon raqami</span>
                                                                         <span>{item.TelefonRaqami}</span>
                                                                     </li>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-12 px-0 mt-3">
+                                                            <div class="card">
+
+                                                                <div class="card-body">
+                                                                    <ul class="nav nav-tabs nav-tabs-solid nav-justified">
+                                                                        <li class="nav-item"><a href="#solid-justified-tab1" class="nav-link active" data-toggle="tab">Funksiya va vazifalari</a></li>
+                                                                        <li class="nav-item"><a href="#solid-justified-tab2" class="nav-link" data-toggle="tab">Qo`shimcha ma`lumot</a></li>
+
+                                                                    </ul>
+
+                                                                    <div class="tab-content">
+                                                                        <div class="tab-pane fade show active" id="solid-justified-tab1">
+                                                                            <Zoom bottom>
+                                                                                <div className="list-feed mx-3 ">
+                                                                                    <div className="list-feed-item">
+                                                                                        <a href="/">David Linner</a> requested refund for a double bank card charge
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        User <a href="/">Christopher Wallace</a> from Google is awaiting for staff reply
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        Ticket <strong>#43683</strong> has been resolved by <a href="/">Victoria Wilson</a>
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        <a href="/">Eugene Kopyov</a> merged <strong>Master</strong>, <strong>Demo</strong> and <strong>Dev</strong> branches
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        All sellers have received payouts for December, 2016!
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        <a href="/">Chris Arney</a> created a new ticket <strong>#43136</strong> and assigned to <a href="/">John Nod</a>
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        <a href="/">David Linner</a> requested refund for a double bank card charge
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        User <a href="/">Christopher Wallace</a> from Google is awaiting for staff reply
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        Ticket <strong>#43683</strong> has been resolved by <a href="/">Victoria Wilson</a>
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        <a href="/">Eugene Kopyov</a> merged <strong>Master</strong>, <strong>Demo</strong> and <strong>Dev</strong> branches
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        All sellers have received payouts for December, 2016!
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        <a href="/">Chris Arney</a> created a new ticket <strong>#43136</strong> and assigned to <a href="/">John Nod</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </Zoom>
+                                                                        </div>
+
+                                                                        <div class="tab-pane fade" id="solid-justified-tab2">
+                                                                            <Zoom bottom>
+                                                                                <div className="list-feed mx-3 ">
+                                                                                    <div className="list-feed-item">
+                                                                                        <a href="/">aaDavid Linner</a> requested refund for a double bank card charge
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        User <a href="/">Christopher Wallace</a> from Google is awaiting for staff reply
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        Ticket <strong>#43683</strong> has been resolved by <a href="/">Victoria Wilson</a>
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        <a href="/">Eugene Kopyov</a> merged <strong>Master</strong>, <strong>Demo</strong> and <strong>Dev</strong> branches
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        All sellers have received payouts for December, 2016!
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        <a href="/">Chris Arney</a> created a new ticket <strong>#43136</strong> and assigned to <a href="/">John Nod</a>
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        <a href="/">David Linner</a> requested refund for a double bank card charge
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        User <a href="/">Christopher Wallace</a> from Google is awaiting for staff reply
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        Ticket <strong>#43683</strong> has been resolved by <a href="/">Victoria Wilson</a>
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        <a href="/">Eugene Kopyov</a> merged <strong>Master</strong>, <strong>Demo</strong> and <strong>Dev</strong> branches
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        All sellers have received payouts for December, 2016!
+                                                                                    </div>
+
+                                                                                    <div className="list-feed-item">
+                                                                                        <a href="/">Chris Arney</a> created a new ticket <strong>#43136</strong> and assigned to <a href="/">John Nod</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </Zoom>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>

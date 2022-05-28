@@ -39,7 +39,7 @@ const Yangiliklar = () => {
             <div className="px-3 mt-3 mt-lg-3 mt-xl-0">
                 <Zoom bottom>
                     <div>
-                        <div className="p-2 text-light rounded bg-primary" style={{ fontSize: "18px" }}>Yangiliklar</div>
+                        <div className="p-2 text-light rounded bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Yangiliklar</div>
                     </div>
                 </Zoom>
 

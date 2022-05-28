@@ -30,13 +30,13 @@ const Sektorlar = () => {
 
     return (
         <Wrapper>
-            <div class="p-2 text-light rounded bg-primary" style={{ fontSize: "18px" }}>Sektorlar</div>
+            <div class="p-2 text-light rounded bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Sektorlar</div>
 
             <div class="sectorlar mt-2">
                 {
                     data.map(({ image, name, id }) => {
                         return (
-                            <div key={id}>
+                            <div key={id} className="sektor">
                                 <div class="d-flex justify-content-center align-items-center sektor-img">
                                     <img src={image} alt="" />
                                 </div>
@@ -46,7 +46,7 @@ const Sektorlar = () => {
                     })
                 }
             </div>
-        </Wrapper>
+        </Wrapper >
     );
 }
 
@@ -60,7 +60,7 @@ const Wrapper = styled.div`
         grid-auto-rows: 300px;
         gap: 8px;
 
-        &>div {
+        .sektor {
             background-color: white;
             border: 1px solid #F4F4F4;
             transition: .5s;

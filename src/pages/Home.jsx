@@ -10,6 +10,7 @@ import Tuzilishi from '../components/home/Tuzilishi';
 import Yangiliklar from '../components/home/Yangiliklar';
 import Yunalishlar from '../components/home/Yunalishlar';
 import Homiylar from '../components/home/Homiylar';
+import { Fade } from 'react-reveal';
 
 const Home = () => {
     return (
@@ -20,9 +21,12 @@ const Home = () => {
             <Yunalishlar />
 
             <div class="davlat-sektor px-3 mt-3">
-                <DavlatHokimiyati />
-                <Sektorlar />
+                <Fade bottom cascade>
+                    <DavlatHokimiyati />
+                    <Sektorlar />
+                </Fade>
             </div>
+
 
             <Tuzilishi />
             <Aloqa />

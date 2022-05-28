@@ -15,7 +15,7 @@ const AsosiyYangiliklar = () => {
                 <div className="row px-3 mt-3 pb-0">
                     <Zoom left>
                         <div className="col-xl-3 col-lg-12 ">
-                            <div className="p-2 text-light rounded bg-primary title">Buxoro viloyati hokimi
+                            <div className="p-2 text-light rounded bg-primary title" style={{ textTransform: "uppercase" }}>Buxoro viloyati hokimi
                             </div>
 
                             <div className="col-lg-12 pt-3 px-0">
@@ -41,7 +41,7 @@ const AsosiyYangiliklar = () => {
                     <div className="col-xl-9 col-lg-12">
                         <Zoom top>
                             <div>
-                                <div className="p-2 text-light rounded bg-primary title">Asosiy yangiliklar</div>
+                                <div className="p-2 text-light rounded bg-primary title" style={{ textTransform: "uppercase" }}>Asosiy yangiliklar</div>
                             </div>
                         </Zoom>
 

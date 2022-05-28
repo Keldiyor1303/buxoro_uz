@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import logo from "../images/sektor-1.png"
-// import karvon from "../images/karvon.png"
+import bukhara from "../images/footer.png"
 
 
 const Footer = () => {
@@ -77,7 +77,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* <img src={karvon} alt="karvon" className='karvon' /> */}
+                <img src={bukhara} alt="karvon" className='karvon' />
             </footer>
         </Wrapper>
     );
@@ -97,8 +97,8 @@ const Wrapper = styled.div`
     }
 
     .karvon {
-        width: 200px;
-        height: 200px;
+        width: 900px;
+        height: 250px;
         object-fit: cover;
         position: absolute;
         bottom: 0;

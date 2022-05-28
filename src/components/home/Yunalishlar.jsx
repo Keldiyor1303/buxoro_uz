@@ -6,6 +6,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 import image from "../../images/yunalish.jpg"
+import { Fade } from 'react-reveal';
 
 const Yunalishlar = () => {
     const data = [
@@ -76,30 +77,29 @@ const Yunalishlar = () => {
 
     return (
         <Wrapper>
-            <div className="px-3">
-                <div className="p-2 text-light bg-primary" style={{ fontSize: "18px" }}>Yo'nalishlar</div>
-
-                <div className="">
-                    <OwlCarousel className='owl-theme' {...options}>
-                        {
-                            data.map(({ image, name }) => {
-                                return (
-                                    <div className="pt-3" style={{ width: "100%" }}>
-                                        <div className='position-relative rounded box'>
-                                            <img src={image} alt="" className='image' />
-                                            <div className='yunalish-div'>
-                                                <p className="text-light p-0 m-0 yunalish-name">
-                                                    {name} </p>
+            <Fade bottom cascade>
+                <div className="px-3">
+                    <div className="p-2 text-light bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Yo'nalishlar</div>
+                    <div className="">
+                        <OwlCarousel className='owl-theme' {...options}>
+                            {
+                                data.map(({ image, name }) => {
+                                    return (
+                                        <div className="pt-3" style={{ width: "100%" }}>
+                                            <div className='position-relative rounded box'>
+                                                <img src={image} alt="" className='image' />
+                                                <div className='yunalish-div'>
+                                                    <p className="text-light p-0 m-0 yunalish-name">
+                                                        {name} </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                )
-                            })}
-                    </OwlCarousel>
-
-
+                                    )
+                                })}
+                        </OwlCarousel>
+                    </div>
                 </div>
-            </div>
+            </Fade>
         </Wrapper>
     );
 }

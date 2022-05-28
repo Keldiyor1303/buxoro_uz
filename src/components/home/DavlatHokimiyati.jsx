@@ -34,7 +34,7 @@ const DavlatHokimiyati = () => {
 
     return (
         <Wrapper>
-            <div className="p-2 text-light rounded bg-primary" style={{ fontSize: "18px" }}>Davlat hokimiyati</div>
+            <div className="p-2 text-light rounded bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Davlat hokimiyati</div>
 
             <div className="mt-2 boxes">
 

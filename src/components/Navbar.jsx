@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Fade from 'react-reveal/Fade';
@@ -11,48 +11,106 @@ const Navbar = () => {
 
     const [show, setShow] = useState(false)
     const [child, setChild] = useState([])
+    const [activeIndex, setActiveIndex] = useState(null)
+
+    const navigate = useNavigate()
 
     const data = [
         {
             link: "VILOYAT HAQIDA",
-            links: ["UMUMIY MA'LUMOT", "O'ZBEKISTON RESPUBLIKASI KONSTITUTSIYASI", "DAVLAT RAMZLARI", "MILLIY BAYRAMLAR", "MILLIY VALYUTA", "DAVLAT MUKOFOTLARI", "HUDUDI VA AHOLI"]
+            links: [
+                { name: "UMUMIY MA'LUMOT", url: "/umumiy_malumot" },
+                { name: "O'ZBEKISTON RESPUBLIKASI KONSTITUTSIYASI", url: "/konstitutsiya" },
+                { name: "DAVLAT RAMZLARI", url: "/davlat_ramzlari" },
+                { name: "MILLIY BAYRAMLAR", url: "/milliy_bayramlar" },
+                { name: "MILLIY VALYUTA", url: "/milliy_valyuta" },
+                { name: "DAVLAT MUKOFOTLARI", url: "/davlat_mukofotlari" },
+                { name: "HUDUDI VA AHOLI", url: "/hududi_va_aholisi" }
+            ]
         },
         {
             link: "HOKIMLIK TO`G`RISIDA",
-            links: ["HOKIMLIK FUNKSIYA VA VAZIFALARI", "XALQ DEPUTATLARI BUXORO VILOYATI KENGASHI", "RAHBARIYAT", "TARKIBIY TUZILMANING SXEMATIK KO'RINISHI", "TARKIBIY BO'LINMALAR", "HOKIMLIKKA MUROJAAT", "HOKIMLIKKA MUROJAAT", "HOKIMLIK TARIXI", "OCHIQ MA’LUMOTLAR PF-6247 BO‘YICHA"]
+            links: [
+                { name: "HOKIMLIK FUNKSIYA VA VAZIFALARI", url: "/hokimlik_vazifalari" },
+                { name: "XALQ DEPUTATLARI BUXORO VILOYATI KENGASHI", url: "/xalq_deputatlari_kengashi" },
+                { name: "RAHBARIYAT", url: "/rahbariyat" },
+                { name: "TARKIBIY TUZILMANING SXEMATIK KO'RINISHI", url: "/sxematik_korinish" },
+                { name: "TARKIBIY BO'LINMALAR", url: "/tarkibiy_bolinmalar" },
+                { name: "HOKIMLIKKA MUROJAAT", url: "/hokimlikka_murojaat" },
+                { name: "HOKIMLIK TARIXI", url: "/hokimlik_tarixi" },
+                { name: "OCHIQ MA’LUMOTLAR PF-6247 BO‘YICHA", url: "/ochiq_malumotlar" },
+            ]
         },
         {
-            link: "VILOYAT HAQIDA",
-            links: ["UMUMIY MA'LUMOT", "O'ZBEKISTON RESPUBLIKASI KONSTITUTSIYASI", "DAVLAT RAMZLARI", "MILLIY BAYRAMLAR", "MILLIY VALYUTA", "DAVLAT MUKOFOTLARI", "HUDUDI VA AHOLI"]
+            link: "HOKIMLIK FAOLIYATI",
+            links: [
+                { name: "DAVLAT DASTURI DOIRASIDA AMALGA OSHIRILGAN ISHLAR", url: "/davlat_dasturi_doirasida" },
+                { name: "MUVOFIQLASHTIRUVCHI MASLAHAT ORGANLAR RAHBARLARI (KOMISSIYALAR, KENGASHLAR, QO'MITALAR)", url: "/maslahat_organlari" },
+                { name: "HOKIMLIKNING TASHKILOT VA IDORALAR BILAN HAMKORLIGI", url: "/idoralar_hamkorligi" },
+                { name: "XALQARO HAMKORLIK", url: "/xalqaro_hamkorlik" },
+                { name: "INVESTITSION FAOLIYAT", url: "/investitsion_faoliyat" },
+                { name: "LOYIHALAR", url: "/loyihalar" },
+                { name: "TENDERLAR", url: "/tenderlar" },
+                { name: "E`LONLAR", url: "/elonlar" },
+                { name: "VAKANSIYALAR", url: "/vakansiyalar" },
+            ]
         },
         {
-            link: "HOKIMLIK TO`G`RISIDA",
-            links: ["HOKIMLIK FUNKSIYA VA VAZIFALARI", "XALQ DEPUTATLARI BUXORO VILOYATI KENGASHI", "RAHBARIYAT", "TARKIBIY TUZILMANING SXEMATIK KO'RINISHI", "TARKIBIY BO'LINMALAR", "HOKIMLIKKA MUROJAAT", "HOKIMLIKKA MUROJAAT", "HOKIMLIK TARIXI", "OCHIQ MA’LUMOTLAR PF-6247 BO‘YICHA"]
+            link: "HUJJATLAR",
+            links: [
+                { name: "QONUNCHILIK", url: "/qonunchilik" },
+                { name: "DAVLAT DASTURLARI", url: "/davlat_dasturlari" },
+                { name: "VILOYAT DASTURLARI", url: "/viloyat_dasturlari" },
+                { name: "NORMATIV HUQUQIY HUJJATLAR", url: "/normativ_hujjatlar" },
+                { name: "HOKIMLIKNING ME'YORIY HUQUQIY HUJJATLARI", url: "/meyoriy_hujjatlar" },
+                { name: "XALQARO SHARTNOMALAR", url: "/xalqaro_shartnomalar" },
+                { name: "TADBIRKORLIK SUBYEKTLARIGA OID HUJJATLAR", url: "/tadbirkorlik_hujjatlari" },
+                { name: "YERLAR TO'G'RISIDA MA'LUMOT", url: "/yerlar_malumoti" },
+                { name: "STATISTIK, TAHLILIY, MA'RUZA VA AXBOROTLAR", url: "/statistik_axborotlar" },
+                { name: "ME'YORIY HUQUQIY HUJJATLAR LOYIHALARINI MUHOKAMALASH", url: "/hujjatlarni_muhokamalash" },
+                { name: "O'Z KUCHINI YO'QOTGAN HUJJATLAR", url: "/kuchini_yoqotgan_hujjatlar" },
+            ]
         },
         {
-            link: "VILOYAT HAQIDA",
-            links: ["UMUMIY MA'LUMOT", "O'ZBEKISTON RESPUBLIKASI KONSTITUTSIYASI", "DAVLAT RAMZLARI", "MILLIY BAYRAMLAR", "MILLIY VALYUTA", "DAVLAT MUKOFOTLARI", "HUDUDI VA AHOLI"]
+            link: "MEDIATEKA",
+            links: [
+                { name: "FOTOGALEREYA", url: "/fotogalereya" },
+                { name: "VIDEOGALEREYA", url: "/videogalereya" },
+            ]
         },
         {
-            link: "HOKIMLIK TO`G`RISIDA",
-            links: ["HOKIMLIK FUNKSIYA VA VAZIFALARI", "XALQ DEPUTATLARI BUXORO VILOYATI KENGASHI", "RAHBARIYAT", "TARKIBIY TUZILMANING SXEMATIK KO'RINISHI", "TARKIBIY BO'LINMALAR", "HOKIMLIKKA MUROJAAT", "HOKIMLIKKA MUROJAAT", "HOKIMLIK TARIXI", "OCHIQ MA’LUMOTLAR PF-6247 BO‘YICHA"]
+            link: "AXBOROT XIZMATI",
+            links: [
+                { name: "YANGILIKLAR", url: "/yangiliklar" },
+                { name: "HOKIMNING NUTQ VA MA'RUZALARI", url: "/hokimlar_nutqi" },
+                { name: "MATBUOT ANJUMANLARI", url: "/matbuot_anjumanlari" },
+                { name: "OCHIQ MAJLISLARDA HOZIR BO’LISH TARTIBI", url: "/majlis_tartibi" },
+                { name: "WEB SAYTDA JOYLASHTIRILADIGAN AXBOROTLAR RO’YXATI", url: "/axborotlar_ruyxati" },
+                { name: "PRESS-RELIZLAR", url: "/press_relizlar" },
+                { name: "AXBOROT OLISHGA DOIR SO’ROVLARNI QABUL QILISH TARTIBI", url: "/surovlarni_qabul_qilish" },
+                { name: "AKKREDITATSIYA O'TKAZISH", url: "/akkreditatsiya" },
+            ]
         },
         {
-            link: "VILOYAT HAQIDA",
-            links: ["UMUMIY MA'LUMOT", "O'ZBEKISTON RESPUBLIKASI KONSTITUTSIYASI", "DAVLAT RAMZLARI", "MILLIY BAYRAMLAR", "MILLIY VALYUTA", "DAVLAT MUKOFOTLARI", "HUDUDI VA AHOLI"]
+            link: "MAHALLIYLASHTIRISH",
+            links: [
+                { name: "QONUNCHILIK", url: "/mahalliy_qonunchilik" },
+                { name: "STATISTIK HISOBOT", url: "/statistik_hisobotlar" },
+                { name: "HUDUDIY IMPORT TAHLILI", url: "/hududiy_import_tahlili" },
+            ]
         },
         {
-            link: "HOKIMLIK TO`G`RISIDA",
-            links: ["HOKIMLIK FUNKSIYA VA VAZIFALARI", "XALQ DEPUTATLARI BUXORO VILOYATI KENGASHI", "RAHBARIYAT", "TARKIBIY TUZILMANING SXEMATIK KO'RINISHI", "TARKIBIY BO'LINMALAR", "HOKIMLIKKA MUROJAAT", "HOKIMLIKKA MUROJAAT", "HOKIMLIK TARIXI", "OCHIQ MA’LUMOTLAR PF-6247 BO‘YICHA"]
+            name: "MUROJAAT",
+            url: "/murojaat"
         },
         {
-            link: "VILOYAT HAQIDA",
-            links: ["UMUMIY MA'LUMOT", "O'ZBEKISTON RESPUBLIKASI KONSTITUTSIYASI", "DAVLAT RAMZLARI", "MILLIY BAYRAMLAR", "MILLIY VALYUTA", "DAVLAT MUKOFOTLARI", "HUDUDI VA AHOLI"]
+            name: "YOSHLAR SEKTORI",
+            url: "/yoshlar_sektori"
         },
         {
-            link: "HOKIMLIK TO`G`RISIDA",
-            links: ["HOKIMLIK FUNKSIYA VA VAZIFALARI", "XALQ DEPUTATLARI BUXORO VILOYATI KENGASHI", "RAHBARIYAT", "TARKIBIY TUZILMANING SXEMATIK KO'RINISHI", "TARKIBIY BO'LINMALAR", "HOKIMLIKKA MUROJAAT", "HOKIMLIKKA MUROJAAT", "HOKIMLIK TARIXI", "OCHIQ MA’LUMOTLAR PF-6247 BO‘YICHA"]
-        }
+            name: "KORRUPSIYAGA QARSHI KURASHISH",
+            url: "/korrupsiyaga_qarshi_kurashish"
+        },
     ]
 
     return (
@@ -90,7 +148,7 @@ const Navbar = () => {
             </div>
 
             <div class="d-flex justify-content-between align-items-center px-3 py-3" style={{ height: "150px" }}>
-                <div class="d-flex align-items-center gap-2">
+                <div class="d-flex align-items-center gap-2" style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
                     <img src={logo} alt="logo" class="logo" />
                     <h1>BUXORO VILOYATI HOKIMLIGI</h1>
                 </div>
@@ -100,7 +158,7 @@ const Navbar = () => {
 
             {
                 !show && <Fade bottom>
-                    <ul style={{ listStyle: "none", display: "flex", flexWrap: "wrap", alignItems: "center", position: "relative", zIndex: "999", marginBottom: "0" }}>
+                    <ul className='px-2' style={{ listStyle: "none", display: "flex", flexWrap: "wrap", alignItems: "center", position: "relative", zIndex: "999", marginBottom: "0" }}>
                         <li className="nav-item dropdown">
                             <span className="navbar-nav-link dropdown-toggle" data-toggle="dropdown">VILOYAT HAQIDA</span>
                             <div className="dropdown-menu dropdown-menu-left">
@@ -178,12 +236,12 @@ const Navbar = () => {
                     <div className='navs'>
                         <ul style={{ width: "100%", fontSize: "20px", overflowY: "scroll" }}>
                             {
-                                data.map(({ link, links }) => {
+                                data.map((item, index) => {
                                     return (
-                                        <div onClick={() => { setChild(links) }} className='links' style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
-                                            <span className="py-1 px-2 links">{link} </span>
+                                        item.links ? (<div key={index} onClick={() => { setChild(item.links); setActiveIndex(index) }} className='links' style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%", color: index === activeIndex ? "#2196F3" : "#808080" }}>
+                                            <span className="py-1 px-2 links" style={{ color: index === activeIndex ? "#2196F3" : "#808080" }}>{item.link} </span>
                                             <i className='icon-arrow-right13 mr-3' style={{ fontSize: "20px" }}></i>
-                                        </div>
+                                        </div>) : <NavLink key={index} style={{ backgroundColor: "white", color: "#808080" }} onClick={() => setShow(false)} to={item.url} className="dropdown-item py-1 px-2">{item.name}</NavLink>
                                     )
                                 })
                             }
@@ -195,7 +253,7 @@ const Navbar = () => {
                             {
                                 child.map((link) => {
                                     return (
-                                        <NavLink style={{ backgroundColor: "white", color: "#808080" }} onClick={() => setShow(false)} to="/umumiy_malumot" className="dropdown-item py-1 px-2">{link}</NavLink>
+                                        <NavLink style={{ backgroundColor: "white", color: "#808080" }} onClick={() => setShow(false)} to={link.url} className="dropdown-item py-1 px-2">{link.name}</NavLink>
                                     )
                                 })
                             }
@@ -231,7 +289,7 @@ const Wrapper = styled.header`
     .icon-cross2, .icon-grid5 {
         position: absolute;
         top: 30px;
-        right: 50px;
+        right: 65px;
         color: #2196F3;
         font-size: 24px;
         cursor: pointer;
@@ -281,6 +339,7 @@ const Wrapper = styled.header`
     .links:hover{
         color: #2196F3 !important;
         cursor: pointer;
+        background-color: #F4F4F4;
 
         span{
             color: #2196F3 !important;
@@ -307,99 +366,3 @@ const Wrapper = styled.header`
     }
 
 `
-
-
-// <ul style={{ listStyle: "none", display: "flex", justifyContent: "space-between", flexWrap: "wrap", alignItems: "start", backgroundColor: "white", height: "calc(100vh - 200px)", padding: "20px 60px", position: "relative" }}>
-//                         <li className="nav-item dropdown">
-//                             <span className="navbar-nav-link dropdown-toggle p-2" data-toggle="dropdown">VILOYAT HAQIDA</span>
-//                             <div className="">
-//                                 <NavLink onClick={() => setShow(false)} style={{ width: "200px" }} to="/umumiy_malumot" className="dropdown-item py-1 px-2">UMUMIY MA'LUMOT</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/konstitutsiya" className="dropdown-item py-1 px-2">O'ZBEKISTON RESPUBLIKASI <br /> KONSTITUTSIYASI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/davlat_ramzlari" className="dropdown-item py-1 px-2">DAVLAT RAMZLARI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/milliy_bayramlar" className="dropdown-item py-1 px-2">MILLIY BAYRAMLAR</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/milliy_valyuta" className="dropdown-item py-1 px-2">MILLIY VALYUTA</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/davlat_mukofotlari" className="dropdown-item py-1 px-2">DAVLAT MUKOFOTLARI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/hududi_va_aholisi" className="dropdown-item py-1 px-2">HUDUDI VA AHOLI</NavLink>
-//                             </div>
-
-//                             <li className="nav-item dropdown mt-4">
-//                                 <span className="navbar-nav-link dropdown-toggle p-2" data-toggle="dropdown">MAHALLIYLASHTIRISH</span>
-//                                 <div className="">
-//                                     <NavLink onClick={() => setShow(false)} to="/mahalliy_qonunchilik" className="dropdown-item py-1 px-2">QONUNCHILIK</NavLink>
-//                                     <NavLink onClick={() => setShow(false)} to="/statistik_hisobotlar" className="dropdown-item py-1 px-2">STATISTIK HISOBOT</NavLink>
-//                                     <NavLink onClick={() => setShow(false)} to="/hududiy_import_tahlili" className="dropdown-item py-1 px-2">HUDUDIY IMPORT TAHLILI</NavLink>
-//                                 </div>
-//                             </li>
-//                         </li>
-
-//                         <li className="nav-item dropdown">
-//                             <span className="navbar-nav-link dropdown-toggle p-2" data-toggle="dropdown">HOKIMLIK TO`G`RISIDA</span>
-//                             <div className="">
-//                                 <NavLink onClick={() => setShow(false)} to="/hokimlik_vazifalari" className="dropdown-item py-1 px-2">HOKIMLIK FUNKSIYA VA VAZIFALARI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/xalq_deputatlari_kengashi" className="dropdown-item py-1 px-2">XALQ DEPUTATLARI BUXORO <br /> VILOYATI KENGASHI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/rahbariyat" className="dropdown-item py-1 px-2">RAHBARIYAT</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/sxematik_korinish" className="dropdown-item py-1 px-2">TARKIBIY TUZILMANING <br /> SXEMATIK KO'RINISHI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/tarkibiy_bolinmalar" className="dropdown-item py-1 px-2">TARKIBIY BO'LINMALAR</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/hokimlikka_murojaat" className="dropdown-item py-1 px-2">HOKIMLIKKA MUROJAAT</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/hokimlik_tarixi" className="dropdown-item py-1 px-2">HOKIMLIK TARIXI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/ochiq_malumotlar" className="dropdown-item py-1 px-2">OCHIQ MA’LUMOTLAR <br /> PF-6247 BO‘YICHA</NavLink>
-//                             </div>
-
-
-//                             <li className="nav-item dropdown mt-3">
-//                                 <span className="navbar-nav-link dropdown-toggle p-2" data-toggle="dropdown">MEDIATEKA</span>
-//                                 <div className="">
-//                                     <NavLink onClick={() => setShow(false)} to="/fotogalereya" className="dropdown-item py-1 px-2">FOTOGALEREYA</NavLink>
-//                                     <NavLink onClick={() => setShow(false)} to="/videogalereya" className="dropdown-item py-1 px-2">VIDEOGALEREYA</NavLink>
-//                                 </div>
-//                             </li>
-//                         </li>
-
-//                         <li className="nav-item dropdown">
-//                             <span className="navbar-nav-link dropdown-toggle p-2" data-toggle="dropdown">HOKIMLIK FAOLIYATI</span>
-//                             <div className="">
-//                                 <NavLink onClick={() => setShow(false)} to="/davlat_dasturi_doirasida" className="dropdown-item py-1 px-2">DAVLAT DASTURI DOIRASIDA <br /> AMALGA OSHIRILGAN ISHLAR</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/maslahat_organlari" className="dropdown-item py-1 px-2">MUVOFIQLASHTIRUVCHI MASLAHAT <br /> ORGANLAR RAHBARLARI <br />(KOMISSIYALAR, KENGASHLAR, QO'MITALAR)</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/idoralar_hamkorligi" className="dropdown-item py-1 px-2">HOKIMLIKNING TASHKILOT VA <br /> IDORALAR BILAN HAMKORLIGI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/xalqaro_hamkorlik" className="dropdown-item py-1 px-2">XALQARO HAMKORLIK</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/investitsion_faoliyat" className="dropdown-item py-1 px-2">INVESTITSION FAOLIYAT</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/loyihalar" className="dropdown-item py-1 px-2">LOYIHALAR</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/tenderlar" className="dropdown-item py-1 px-2">TENDERLAR</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/elonlar" className="dropdown-item py-1 px-2">E`LONLAR</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/vakansiyalar" className="dropdown-item py-1 px-2">VAKANSIYALAR</NavLink>
-//                             </div>
-//                         </li>
-
-//                         <li className="nav-item dropdown">
-//                             <span className="navbar-nav-link dropdown-toggle p-2" data-toggle="dropdown">HUJJATLAR</span>
-//                             <div className="">
-//                                 <NavLink onClick={() => setShow(false)} to="/qonunchilik" className="dropdown-item py-1 px-2">Qonunchilik</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/davlat_dasturlari" className="dropdown-item py-1 px-2">DAVLAT DASTURLARI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/viloyat_dasturlari" className="dropdown-item py-1 px-2">VILOYAT DASTURLARI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/normativ_hujjatlar" className="dropdown-item py-1 px-2">NORMATIV HUQUQIY HUJJATLAR</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/meyoriy_hujjatlar" className="dropdown-item py-1 px-2">HOKIMLIKNING ME'YORIY <br /> HUQUQIY HUJJATLARI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/xalqaro_shartnomalar" className="dropdown-item py-1 px-2">XALQARO SHARTNOMALAR</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/tadbirkorlik_hujjatlari" className="dropdown-item py-1 px-2">TADBIRKORLIK SUBYEKTLARIGA <br /> OID HUJJATLAR</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/yerlar_malumoti" className="dropdown-item py-1 px-2">YERLAR TO'G'RISIDA MA'LUMOT</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/statistik_axborotlar" className="dropdown-item py-1 px-2">STATISTIK, TAHLILIY, <br /> MA'RUZA VA AXBOROTLAR</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/hujjatlarni_muhokamalash" className="dropdown-item py-1 px-2">ME'YORIY HUQUQIY HUJJATLAR <br /> LOYIHALARINI MUHOKAMALASH</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/kuchini_yoqotgan_hujjatlar" className="dropdown-item py-1 px-2">O'Z KUCHINI YO'QOTGAN HUJJATLAR</NavLink>
-//                             </div>
-//                         </li>
-
-//                         <li className="nav-item dropdown">
-//                             <span className="navbar-nav-link dropdown-toggle p-2" data-toggle="dropdown">AXBOROT XIZMATI</span>
-//                             <div className="">
-//                                 <NavLink onClick={() => setShow(false)} to="/yangiliklar" className="dropdown-item py-1 px-2">YANGILIKLAR</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/hokimlar_nutqi" className="dropdown-item py-1 px-2">HOKIMNING NUTQ VA MA'RUZALARI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/matbuot_anjumanlari" className="dropdown-item py-1 px-2">MATBUOT ANJUMANLARI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/majlis_tartibi" className="dropdown-item py-1 px-2">OCHIQ MAJLISLARDA HOZIR <br /> BO’LISH TARTIBI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/axborotlar_ruyxati" className="dropdown-item py-1 px-2">WEB SAYTDA JOYLASHTIRILADIGAN <br /> AXBOROTLAR RO’YXATI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/press_relizlar" className="dropdown-item py-1 px-2">PRESS-RELIZLAR</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/surovlarni_qabul_qilish" className="dropdown-item py-1 px-2">AXBOROT OLISHGA DOIR <br /> SO’ROVLARNI QABUL <br /> QILISH TARTIBI</NavLink>
-//                                 <NavLink onClick={() => setShow(false)} to="/akkreditatsiya" className="dropdown-item py-1 px-2">AKKREDITATSIYA O'TKAZISH</NavLink>
-//                             </div>
-//                         </li>
-
-//                         <i onClick={() => setShow(!show)} className='icon-cross2'></i>
-//                     </ul>

@@ -10,7 +10,7 @@ const LeftPanel = () => {
             <DavlatHokimiyati />
             <div className="ish-tartibi mt-2">
                 <div>
-                    <div className="p-2 text-light bg-primary" style={{ fontSize: "18px" }}>Dasturiy ta'minot</div>
+                    <div className="p-2 text-light bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Dasturiy ta'minot</div>
 
                     <div className="list-group dasturiy mt-2">
                         <a href="/" className="list-group-item list-group-item-action">E-imzo</a>
@@ -26,7 +26,7 @@ const LeftPanel = () => {
                 </div>
 
                 <div>
-                    <div className="p-2 text-light bg-primary" style={{ fontSize: "18px" }}>Ish tartibi</div>
+                    <div className="p-2 text-light bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Ish tartibi</div>
 
                     <div className="list-group">
                         <li className="list-group-item list-group-item-action px-3 py-1 d-flex">
@@ -45,14 +45,14 @@ const LeftPanel = () => {
                 </div>
 
                 <div>
-                    <div className="p-2 text-light bg-primary" style={{ fontSize: "18px" }}>Online murojaat</div>
+                    <div className="p-2 text-light bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Online murojaat</div>
                     <div className="d-flex justify-content-center align-items-center">
                         <img src={aloqa} alt="aloqa" style={{ width: "80%", height: "112px" }} />
                     </div>
                 </div>
 
                 <div>
-                    <div className="p-2 text-light bg-primary" style={{ fontSize: "18px" }}>Ishonch telefonlari</div>
+                    <div className="p-2 text-light bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Ishonch telefonlari</div>
 
                     <div className="d-flex align-items-center gap-2 px-3 pt-3">
                         <i className="icon-phone mr-3" style={{ fontSize: "54px" }}></i>
@@ -65,7 +65,7 @@ const LeftPanel = () => {
                 </div>
 
                 <div>
-                    <div className="p-2 text-light bg-primary" style={{ fontSize: "18px" }}>Viloyat hokimligining
+                    <div className="p-2 text-light bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Viloyat hokimligining
                         umumiy bo'limi</div>
 
                     <div className="d-flex align-items-center gap-2 px-3 pt-3">
@@ -79,7 +79,7 @@ const LeftPanel = () => {
                 </div>
 
                 <div>
-                    <div className="p-2 text-light bg-primary" style={{ fontSize: "18px" }}>Sayt ishlashini baholang</div>
+                    <div className="p-2 text-light bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Sayt ishlashini baholang</div>
 
                     <div className="px-3">
                         <div className="form-check mt-3" style={{ fontSize: "18px" }}>

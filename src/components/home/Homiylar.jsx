@@ -8,6 +8,7 @@ import image from "../../images/ziyonet.png"
 import x1 from "../../images/x1.png"
 import x2 from "../../images/x2.png"
 import x3 from "../../images/x3.png"
+import { Fade } from 'react-reveal';
 
 const Homiylar = () => {
     const data = [
@@ -71,20 +72,22 @@ const Homiylar = () => {
     }
     return (
         <Wrapper className='px-3'>
-            <OwlCarousel className='owl-theme' {...options}>
-                {
-                    data.map(({ id, image, name }) => {
-                        return (
-                            <div key={id} className="box text-light">
-                                <img src={image} alt={name} className="image" />
-                                <div className='name'>
-                                    <span>{name}</span>
+            <Fade bottom>
+                <OwlCarousel className='owl-theme' {...options}>
+                    {
+                        data.map(({ id, image, name }) => {
+                            return (
+                                <div key={id} className="box text-light">
+                                    <img src={image} alt={name} className="image" />
+                                    <div className='name'>
+                                        <span>{name}</span>
+                                    </div>
                                 </div>
-                            </div>
-                        )
-                    })
-                }
-            </OwlCarousel>
+                            )
+                        })
+                    }
+                </OwlCarousel>
+            </Fade>
         </Wrapper>
     );
 }
