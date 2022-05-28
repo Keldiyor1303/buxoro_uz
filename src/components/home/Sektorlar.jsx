@@ -30,7 +30,7 @@ const Sektorlar = () => {
 
     return (
         <Wrapper>
-            <div class="p-2 text-light rounded bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Sektorlar</div>
+            <div class="p-2 mt-2 text-light rounded bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Sektorlar</div>
 
             <div class="sectorlar mt-2">
                 {
@@ -71,6 +71,14 @@ const Wrapper = styled.div`
             }
         }
     }
+
+    @media (max-width: 1200px) {
+        .sectorlar {
+        grid-template-columns: repeat(2, 1fr);
+
+        }
+    }
+
 
     .sektor-img {
         width: 100%; 

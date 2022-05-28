@@ -34,7 +34,7 @@ const DavlatHokimiyati = () => {
 
     return (
         <Wrapper>
-            <div className="p-2 text-light rounded bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Davlat hokimiyati</div>
+            <div className="p-2 mt-2 text-light rounded bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Davlat hokimiyati</div>
 
             <div className="mt-2 boxes">
 
@@ -70,6 +70,19 @@ const Wrapper = styled.div`
         overflow-x: hidden; 
         height: 300px; 
         background-color: white;
+    }
+
+    @media(max-width: 1200px) {
+        .boxes {
+            height: 610px;
+            /* min-height: 300px; */
+        }
+    }
+
+    @media(max-width: 768px) {
+        .boxes {
+            height: 300px;
+        }
     }
 
     .box {

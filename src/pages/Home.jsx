@@ -20,7 +20,7 @@ const Home = () => {
             <Yangiliklar />
             <Yunalishlar />
 
-            <div class="davlat-sektor px-3 mt-3">
+            <div class="davlat-sektor px-3 mt-1">
                 <Fade bottom cascade>
                     <DavlatHokimiyati />
                     <Sektorlar />
@@ -50,11 +50,29 @@ const Wrapper = styled.div`
     .davlat-sektor {
         display: grid;
         grid-template-columns: 3fr 9fr;
-        grid-auto-rows: 360px;
         gap: 8px;
 
         &>div {
-            background-color: white;
+            /* background-color: white; */
+            min-height: 360px;
+        }
+    }
+
+    @media(max-width: 1200px) {
+        .davlat-sektor {
+            grid-template-columns: 4fr 8fr;
+
+            &>div {
+            /* background-color: white; */
+            min-height: 670px;
+        }
+        }
+    }
+
+    @media(max-width: 768px) {
+        .davlat-sektor {
+            grid-template-columns: 1fr;
+            grid-template-rows: 360px 670px;
         }
     }
 `

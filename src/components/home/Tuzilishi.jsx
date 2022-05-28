@@ -61,8 +61,8 @@ const Tuzilishi = () => {
     return (
         <Wrapper>
             <Fade bottom cascade>
-                <div className="px-3 pt-3">
-                    <div className="row">
+                <div className="px-2 pt-3">
+                    <div className="box">
                         <div className="col">
                             <div className="p-2 text-light rounded bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Ma'muriy tuzilishi</div>
 
@@ -104,6 +104,10 @@ const Wrapper = styled.div`
         border: 0
     }
 
+    .box {
+        display: flex;
+    }
+
     
     .tumanlar {
         display: grid;
@@ -115,6 +119,12 @@ const Wrapper = styled.div`
             grid-column: span 2;
         }
 }
+
+@media (max-width: 768px) {
+            .box{
+                flex-direction: column;
+            }
+        }
 
     
 `

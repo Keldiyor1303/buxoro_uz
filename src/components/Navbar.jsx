@@ -115,36 +115,35 @@ const Navbar = () => {
 
     return (
         <Wrapper>
-            <div className="navbar navbar-expand-xl sticky-top"
-                style={{ backgroundColor: "#fff", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px", height: "50px", width: "100%" }}>
+            <div className='px-2 navbar' style={{ backgroundColor: "#fff", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px", height: "50px", width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
 
 
-                <div className="navbar-nav" style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <div className="navbar-nav" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                     <div className='tillar' style={{ display: "flex", gap: "16px" }}>
                         <i className='icon-sphere'></i>
                         <Link to="/" className='active'>O'zbekcha</Link>
                         <Link to="/">Ўзбекча</Link>
                         <Link to="/">English</Link>
                     </div>
-
-
-                    <ul className="navbar-nav ml-xl-auto right-panel">
-                        <li className="nav-item mr-2">
-                            <input type="text" className="form-control" placeholder="Izlash..." />
-                        </li>
-
-                        <li className="nav-item mr-2">
-                            <button type="button" className="btn text-light bg-primary ">
-                                Izlash
-                            </button>
-                        </li>
-
-                        <li className="nav-item mr-2">
-                            <button type="button" className="btn text-light bg-primary"> <i className="icon-eye"></i>
-                            </button>
-                        </li>
-                    </ul>
                 </div>
+
+
+                <ul className="navbar-nav ml-xl-auto right-panel">
+                    <li className="nav-item mr-2">
+                        <input type="text" className="form-control" placeholder="Izlash..." />
+                    </li>
+
+                    {/* <li className="nav-item mr-2">
+                        <button type="button" className="btn text-light bg-primary ">
+                            Izlash
+                        </button>
+                    </li> */}
+
+                    <li className="nav-item mr-2">
+                        <button type="button" className="btn text-light bg-primary"> <i className="icon-eye"></i>
+                        </button>
+                    </li>
+                </ul>
             </div>
 
             <div class="d-flex justify-content-between align-items-center px-3 py-3" style={{ height: "150px" }}>
@@ -365,4 +364,14 @@ const Wrapper = styled.header`
         height: 100px;
     }
 
+    @media(max-width: 768px) {
+        .buxoro-img, .logo {
+        height: 75px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+    }
+    
 `
