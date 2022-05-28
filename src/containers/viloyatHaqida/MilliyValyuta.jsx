@@ -83,7 +83,7 @@ const MilliyValyuta = () => {
                         <ul class="nav nav-tabs nav-tabs-solid nav-justified">
                             <li class="nav-item"><a href="#solid-justified-tab1" class="nav-link active" data-toggle="tab">Banknotlar</a></li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tangalar</a>
+                                <a href="/" class="nav-link dropdown-toggle" data-toggle="dropdown">Tangalar</a>
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <a href="#solid-justified-tab2" class="dropdown-item" data-toggle="tab">1994-2000 yillar</a>
                                     <a href="#solid-justified-tab3" class="dropdown-item" data-toggle="tab">2000-2004 yillar</a>

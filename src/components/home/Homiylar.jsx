@@ -56,14 +56,13 @@ const Homiylar = () => {
         autoplay: true,
         loop: true,
         autoplayTimeout: 2000,
-        smartSpeed: 2000,
         autoplayHoverPause: true,
         responsive: {
             0: {
-                items: 1
+                items: 2
             },
             768: {
-                items: 3,
+                items: 4,
             },
             1200: {
                 items: 6,
@@ -71,7 +70,7 @@ const Homiylar = () => {
         },
     }
     return (
-        <Wrapper className='px-3'>
+        <Wrapper className='px-3 py-3 owl'>
             <Fade bottom>
                 <OwlCarousel className='owl-theme' {...options}>
                     {

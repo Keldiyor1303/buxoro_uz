@@ -185,7 +185,7 @@ const Navbar = () => {
                             </div>
                         </li>
 
-                        <li className="nav-item dropdown">
+                        <li className="nav-item dropdown out">
                             <span className="navbar-nav-link dropdown-toggle" data-toggle="dropdown">HOKIMLIK FAOLIYATI</span>
                             <div className="dropdown-menu dropdown-menu-left">
                                 <NavLink to="/davlat_dasturi_doirasida" className="dropdown-item">DAVLAT DASTURI DOIRASIDA <br /> AMALGA OSHIRILGAN ISHLAR</NavLink>
@@ -200,7 +200,7 @@ const Navbar = () => {
                             </div>
                         </li>
 
-                        <li className="nav-item dropdown">
+                        <li className="nav-item dropdown out">
                             <span className="navbar-nav-link dropdown-toggle" data-toggle="dropdown">HUJJATLAR</span>
                             <div className="dropdown-menu dropdown-menu-left">
                                 <NavLink to="/qonunchilik" className="dropdown-item">Qonunchilik</NavLink>
@@ -217,11 +217,11 @@ const Navbar = () => {
                             </div>
                         </li>
 
-                        <li className="nav-item"><NavLink to="/murojaat" className="navbar-nav-link p-2">MUROJAAT</NavLink></li>
+                        <li className="nav-item out"><NavLink to="/murojaat" className="navbar-nav-link p-2">MUROJAAT</NavLink></li>
 
-                        <li className="nav-item"><NavLink to="/yoshlar_sektori" className="navbar-nav-link p-2">YOSHLAR SEKTORI</NavLink></li>
+                        <li className="nav-item out"><NavLink to="/yoshlar_sektori" className="navbar-nav-link p-2">YOSHLAR SEKTORI</NavLink></li>
 
-                        <li className="nav-item"><NavLink to="/korrupsiyaga_qarshi_kurashish" className="navbar-nav-link p-2">KORRUPSIYAGA QARSHI KURASHISH</NavLink></li>
+                        <li className="nav-item out"><NavLink to="/korrupsiyaga_qarshi_kurashish" className="navbar-nav-link p-2">KORRUPSIYAGA QARSHI KURASHISH</NavLink></li>
 
 
                         <i onClick={() => setShow(!show)} className='icon-grid5' ></i>
@@ -372,6 +372,18 @@ const Wrapper = styled.header`
         h1 {
             font-size: 24px;
         }
+
+        .out {
+            display: none;
+        }
+
+        .icon-grid5 {
+            right: 24px;
+        }
+
+        .navs {
+            grid-template-columns: 1fr;
+        } 
     }
     
 `

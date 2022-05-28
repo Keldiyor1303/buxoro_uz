@@ -2,6 +2,8 @@ import React from 'react';
 import { Fade } from 'react-reveal';
 import styled from 'styled-components';
 
+import Iframe from 'react-iframe'
+
 const Tuzilishi = () => {
     const data = [
         {
@@ -66,10 +68,14 @@ const Tuzilishi = () => {
                         <div className="col">
                             <div className="p-2 text-light rounded bg-primary" style={{ fontSize: "18px", textTransform: "uppercase" }}>Ma'muriy tuzilishi</div>
 
-                            <iframe className="mt-3"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49060.9606733306!2d64.38777874840196!3d39.777597002277766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f50060e65993cd5%3A0xc87beaf40e48e767!2z0JHRg9GF0LDRgNCwLCDQo9C30LHQtdC60LjRgdGC0LDQvQ!5e0!3m2!1sru!2s!4v1653191666410!5m2!1sru!2s"
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <Iframe url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49060.9606733306!2d64.38777874840196!3d39.777597002277766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f50060e65993cd5%3A0xc87beaf40e48e767!2z0JHRg9GF0LDRgNCwLCDQo9C30LHQtdC60LjRgdGC0LDQvQ!5e0!3m2!1sru!2s!4v1653191666410!5m2!1sru!2s"
+                                width="100%"
+                                height="100%"
+                                className='my-3'
+                            />
+
+                            {/* <iframe className="mt-3"
+                                width="500px" /> */}
                         </div>
 
                         <div className="col">

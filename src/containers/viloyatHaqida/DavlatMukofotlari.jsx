@@ -36,7 +36,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "8px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -48,7 +48,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "16px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -66,7 +66,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "8px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -78,7 +78,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "16px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -90,7 +90,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "8px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -102,7 +102,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "16px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -114,7 +114,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "8px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -126,7 +126,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "16px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -138,7 +138,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "8px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -150,7 +150,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "16px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -168,7 +168,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "8px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -180,7 +180,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "16px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -198,7 +198,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "8px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -210,7 +210,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "16px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -228,7 +228,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "8px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 
@@ -240,7 +240,7 @@ const DavlatMukofotlari = () => {
                                     <div style={{ display: "flex", gap: "16px", backgroundColor: "#fff", padding: "8px", marginTop: "16px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                                         <img src={unvon} alt="" />
                                         <p style={{ fontSize: "18px" }}>
-                                            <a href="https://lex.uz/docs/3676244" target={"_blank"}>«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
+                                            <a href="https://lex.uz/docs/3676244" target={"_blank"} rel="noreferrer">«O‘zbekiston Qahramoni»</a> unvoni. «O‘zbekiston Qahramoni» unvoni oliy darajadagi mukofot bo‘lib, O‘zbekiston Respublikasining fuqarolariga davlat va xalq oldidagi qahramonona jasorat ko‘rsatish bilan bog‘liq xizmatlari uchun beriladi.
 
                                             «O‘zbekiston Qahramoni» unvoni ayrim hollarda O‘zbekiston Respublikasi fuqarosi bo‘lmagan shaxslarga ham berilishi mumkin.
 

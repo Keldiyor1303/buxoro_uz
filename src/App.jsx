@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import Card from "./components/Card";
 import YangilikDetail from "./components/YangilikDetail";
 import UmumiyMalumot from "./containers/viloyatHaqida/UmumiyMalumot";
 import Layout from "./Layout";
@@ -136,7 +135,6 @@ function App() {
 
 
       <Route path="/1" element={<Layout> <YangilikDetail /> </Layout>} />
-      <Route path="/2" element={<Layout> <Card /> </Layout>} />
       <Route path="/3" element={<Layout> <Navbar2 /> </Layout>} />
     </Routes>
   );
