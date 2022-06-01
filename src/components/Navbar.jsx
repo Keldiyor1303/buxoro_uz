@@ -119,7 +119,7 @@ const Navbar = () => {
 
 
                 <div className="navbar-nav" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                    <div className='tillar' style={{ display: "flex", gap: "16px" }}>
+                    <div className='tillar' style={{ display: "flex", gap: "16px", fontSize: "1rem" }}>
                         <i className='icon-sphere'></i>
                         <Link to="/" className='active'>O'zbekcha</Link>
                         <Link to="/">Ўзбекча</Link>
@@ -130,7 +130,7 @@ const Navbar = () => {
 
                 <ul className="navbar-nav ml-xl-auto right-panel">
                     <li className="nav-item mr-2">
-                        <input type="text" className="form-control" placeholder="Izlash..." />
+                        <input style={{ fontSize: "1rem" }} type="text" className="form-control" placeholder="Izlash..." />
                     </li>
 
                     {/* <li className="nav-item mr-2">
@@ -140,7 +140,7 @@ const Navbar = () => {
                     </li> */}
 
                     <li className="nav-item mr-2">
-                        <button type="button" className="btn text-light bg-primary"> <i className="icon-eye"></i>
+                        <button type="button" className="btn text-light bg-primary" style={{ fontSize: "1rem" }}> <i className="icon-eye"></i>
                         </button>
                     </li>
                 </ul>
@@ -149,7 +149,7 @@ const Navbar = () => {
             <div class="d-flex justify-content-between align-items-center px-3 py-3" style={{ height: "150px" }}>
                 <div class="d-flex align-items-center gap-2" style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
                     <img src={logo} alt="logo" class="logo" />
-                    <h1>BUXORO VILOYATI HOKIMLIGI</h1>
+                    <h1 style={{ fontSize: "2rem" }}>BUXORO VILOYATI HOKIMLIGI</h1>
                 </div>
                 <img src={buxoro} alt="buxoro" class="buxoro-img" />
             </div>
@@ -203,7 +203,7 @@ const Navbar = () => {
                         <li className="nav-item dropdown out">
                             <span className="navbar-nav-link dropdown-toggle" data-toggle="dropdown">HUJJATLAR</span>
                             <div className="dropdown-menu dropdown-menu-left">
-                                <NavLink to="/qonunchilik" className="dropdown-item">Qonunchilik</NavLink>
+                                <NavLink to="/qonunchilik" className="dropdown-item">QONUNCHILIK</NavLink>
                                 <NavLink to="/davlat_dasturlari" className="dropdown-item">DAVLAT DASTURLARI</NavLink>
                                 <NavLink to="/viloyat_dasturlari" className="dropdown-item">VILOYAT DASTURLARI</NavLink>
                                 <NavLink to="/normativ_hujjatlar" className="dropdown-item">NORMATIV HUQUQIY HUJJATLAR</NavLink>
@@ -288,15 +288,15 @@ const Wrapper = styled.header`
     .icon-cross2, .icon-grid5 {
         position: absolute;
         top: 30px;
-        right: 65px;
+        right: 24px;
         color: #2196F3;
-        font-size: 24px;
+        font-size: 1.5rem;
         cursor: pointer;
         transition: .3s;
     }
 
     .tillar i {
-            font-size: 24px;
+            font-size: 1.5rem;
             cursor: pointer;
             transition: .3s;
     }
@@ -329,6 +329,7 @@ const Wrapper = styled.header`
     ul a, ul span {
         color: #808080;
         font-weight: 500;
+        font-size: 1rem;
     }
 
     ul a:hover, ul a:focus, ul span:hover, ul span:focus  {

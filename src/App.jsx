@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import YangilikDetail from "./components/YangilikDetail";
 import UmumiyMalumot from "./containers/viloyatHaqida/UmumiyMalumot";
 import Layout from "./Layout";
 import Home from "./pages/Home";
@@ -52,8 +51,16 @@ import HududiyImportTahlili from "./containers/mahalliylashtirish/HududiyImportT
 import Murojaat from "./containers/Murojaat";
 import YoshlarSektori from "./containers/YoshlarSektori";
 import KorrupsiyagaQarshiKurashish from "./containers/KorrupsiyagaQarshiKurashish";
-import Navbar2 from "./components/Navbar2";
 import DavlatMukofotlari from "./containers/viloyatHaqida/DavlatMukofotlari";
+import Login from "./pages/AdminPanel/Login";
+import LayoutAdmin from "./LayoutAdmin";
+import AdminViloyatHaqida from "./pages/AdminPanel/AdminViloyatHaqida";
+import AdminHokimlikTogrisida from "./pages/AdminPanel/AdminHokimlikTogrisida";
+import AdminHokimlikFaoliyatlari from "./pages/AdminPanel/AdminHokimlikFaoliyati";
+import AdminHujjatlar from "./pages/AdminPanel/AdminHujjatlar";
+import AdminMediateka from "./pages/AdminPanel/AdminMediateka";
+import AdminAxborotXizmati from "./pages/AdminPanel/AdminAxborotXizmati";
+import AdminMahalliylashtirish from "./pages/AdminPanel/AdminMahalliylashtirish";
 
 function App() {
   return (
@@ -131,11 +138,16 @@ function App() {
       {/* KORRUPSIYAGA QARSHI KURASHISH */}
       <Route path="/korrupsiyaga_qarshi_kurashish" element={<Layout> <KorrupsiyagaQarshiKurashish /> </Layout>} />
 
+      {/* ADMIN PANEL */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/admin/viloyat_haqida" element={<LayoutAdmin><AdminViloyatHaqida /></LayoutAdmin>} />
+      <Route path="/admin/hokimlik_togrisida" element={<LayoutAdmin><AdminHokimlikTogrisida /></LayoutAdmin>} />
+      <Route path="/admin/hokimlik_faoliyati" element={<LayoutAdmin><AdminHokimlikFaoliyatlari /></LayoutAdmin>} />
+      <Route path="/admin/hujjatlar" element={<LayoutAdmin><AdminHujjatlar /></LayoutAdmin>} />
+      <Route path="/admin/mediateka" element={<LayoutAdmin><AdminMediateka /></LayoutAdmin>} />
+      <Route path="/admin/axborot_xizmati" element={<LayoutAdmin><AdminAxborotXizmati /></LayoutAdmin>} />
+      <Route path="/admin/mahalliylashtirish" element={<LayoutAdmin><AdminMahalliylashtirish /></LayoutAdmin>} />
 
-
-
-      <Route path="/1" element={<Layout> <YangilikDetail /> </Layout>} />
-      <Route path="/3" element={<Layout> <Navbar2 /> </Layout>} />
     </Routes>
   );
 }
