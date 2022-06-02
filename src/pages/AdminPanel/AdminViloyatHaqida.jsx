@@ -6,6 +6,10 @@ import image1 from "../../images/sport majmuasi.jpg"
 
 const AdminViloyatHaqida = () => {
     const [show, setShow] = useState(false)
+    const [showTableParam, setShowTableParam] = useState(false)
+    const [cols, setCols] = useState(2)
+    const [rows, setRows] = useState(2)
+    const [addedData, setAddedData] = useState([{ name: "textarea", title: "" }])
 
     document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
@@ -36,6 +40,51 @@ const AdminViloyatHaqida = () => {
             images: [image1, image1, image1, image1]
         },
     ]
+
+    function added(element) {
+        if (element === "textarea") {
+            setAddedData([...addedData, { name: "textarea", title: "" }])
+        }
+
+        if (element === "table") {
+            let table = [];
+            for (let i = 0; i < rows; i++) {
+                let object = {}
+                for (let j = 0; j < cols; j++) {
+                    object[`col${j + 1}`] = `${j + 1}`
+                }
+
+                table.push(object);
+            }
+
+            setAddedData([...addedData, { name: "table", tableData: table }])
+
+            setCols(2);
+            setRows(2)
+        }
+    }
+
+    function ozgartir(num, indexData, index, index2) {
+        console.log(num, indexData, index, index2);
+        let faceData = addedData.filter((element, indexx1) => {
+
+            if (indexx1 === indexData) {
+                console.log(addedData[indexx1]);
+
+                element.tableData.filter((element2, indexx2) => {
+                    if (indexx2 === index) {
+                        element2[`col${index2 + 1}`] = num;
+                    }
+                    return element2;
+                })
+            }
+            return element;
+        })
+
+        setAddedData(faceData)
+    }
+
+    console.log(addedData);
 
     return (
         <Wrapper>
@@ -86,9 +135,6 @@ const AdminViloyatHaqida = () => {
                                                     )
                                                 })
                                             }
-
-
-
                                         </tbody>
                                     </table>
 
@@ -104,8 +150,6 @@ const AdminViloyatHaqida = () => {
 
                         <div class="tab-pane fade" id="solid-justified-tab2">
                             <Zoom bottom>
-
-
                             </Zoom>
                         </div>
                     </div>
@@ -113,85 +157,116 @@ const AdminViloyatHaqida = () => {
             </div >
 
             {show && <div className='modall'>
-                <div style={{ width: "80%" }}>
-                    <div class="modal-dialog">
+                <div style={{ width: "100%", minHeight: "90vh", maxHeight: "90vh", overflowY: "auto" }}>
+                    <div class="modal-dialog modal-full">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Vertical form</h5>
-                                <button type="button" class="close" data-dismiss="modal">×</button>
+                            <div class="modal-header bg-primary text-white">
+                                <h5 class="modal-title">QO'SHISH</h5>
+                                <button onClick={() => setShow(false)} type="button" class="close" data-dismiss="modal"><i className='icon-cross2'></i></button>
                             </div>
 
-                            <form action="#">
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <label>First name</label>
-                                                <input type="text" placeholder="Eugene" class="form-control" />
-                                            </div>
+                            <div class="modal-body">
+                                <div style={{ display: "flex", gap: "16px", marginBottom: "16px" }}>
+                                    <div style={{ width: "100%" }}>
+                                        <label>Sarlavha matni</label>
+                                        <input type="text" placeholder="Sarlavha matnini kiriting" class="form-control" />
+                                    </div>
 
-                                            <div class="col-sm-6">
-                                                <label>Last name</label>
-                                                <input type="text" placeholder="Kopyov" class="form-control" />
-                                            </div>
+                                    <div style={{ width: "100%" }}>
+                                        <label>Sarlavha rasmi</label>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="customFile" />
+                                            <label class="custom-file-label" for="customFile">Rasm tanlash</label>
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <label>Address line 1</label>
-                                                <input type="text" placeholder="Ring street 12" class="form-control" />
-                                            </div>
-
-                                            <div class="col-sm-6">
-                                                <label>Address line 2</label>
-                                                <input type="text" placeholder="building D, flat #67" class="form-control" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <label>City</label>
-                                                <input type="text" placeholder="Munich" class="form-control" />
-                                            </div>
-
-                                            <div class="col-sm-4">
-                                                <label>State/Province</label>
-                                                <input type="text" placeholder="Bayern" class="form-control" />
-                                            </div>
-
-                                            <div class="col-sm-4">
-                                                <label>ZIP code</label>
-                                                <input type="text" placeholder="1031" class="form-control" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <label>Email</label>
-                                                <input type="text" placeholder="eugene@kopyov.com" class="form-control" />
-                                                <span class="form-text text-muted">name@domain.com</span>
-                                            </div>
-
-                                            <div class="col-sm-6">
-                                                <label>Phone #</label>
-                                                <input type="text" placeholder="+99-99-9999-9999" data-mask="+99-99-9999-9999" class="form-control" />
-                                                <span class="form-text text-muted">+99-99-9999-9999</span>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
 
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary">Submit form</button>
+                                <div style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
+                                    <button onClick={() => added("textarea")} className='btn btn-primary w-100'>Textarea</button>
+                                    <div className='w-100'>
+                                        <button onClick={() => setShowTableParam(!showTableParam)} className='btn btn-primary w-100'>Table</button>
+
+                                        {showTableParam && <div class="col-lg-12" style={{ backgroundColor: "#F4F4F4", padding: "16px" }}>
+                                            <div class="col-lg-12">
+                                                <label>Ustunlar soni:</label>
+                                                <input onChange={(e) => setCols(e.target.value)} type="number" placeholder="2" class="form-control" defaultValue={2} />
+                                            </div>
+                                            <div class="col-lg-12 mt-2">
+                                                <label>Qatorlar soni:</label>
+                                                <input onChange={(e) => setRows(e.target.value)} type="number" placeholder="2" class="form-control" defaultValue={2} />
+                                            </div>
+
+                                            <div class="col-lg-12 mt-2">
+                                                <button onClick={() => { added("table"); setShowTableParam(false) }} className='btn btn-primary w-100'>qo`shish</button>
+                                            </div>
+                                        </div>}
+                                    </div>
+                                    <button className='btn btn-primary w-100'>Ro'yxat</button>
+                                    <button className='btn btn-primary w-100'>Eslatma</button>
+                                    <button className='btn btn-primary w-100'>Rasm</button>
                                 </div>
-                            </form>
+                            </div>
+
+                            <div className="korinish px-3">
+                                {
+                                    addedData.map((element, indexData) => {
+                                        return (
+                                            <>
+                                                {element.name === "textarea" && (
+                                                    <textarea rows="3" cols="3" class="form-control my-2" placeholder="Default textarea"></textarea>
+                                                )}
+
+                                                {element.name === "table" && (
+                                                    <table class="table datatable-colvis-basic table-hover border mb-2">
+                                                        {
+                                                            element?.tableData.map((malumot, index) => {
+                                                                return (
+                                                                    index === 0 ? (
+                                                                        <thead key={index}>
+                                                                            <tr>
+                                                                                {Object.values(malumot).map((d, index2) => (
+                                                                                    <th contenteditable="true" onKeyUp={(e) => ozgartir(e.target.textContent, indexData, index, index2)}>{d}</th>
+                                                                                ))}
+
+                                                                            </tr>
+                                                                        </thead>
+                                                                    ) : (
+                                                                        <tbody>
+                                                                            <tr key={index}>
+                                                                                {Object.values(malumot).map((d, index2) => (
+                                                                                    <td contenteditable="true" onKeyUp={(e) => ozgartir(e.target.textContent, indexData, index, index2)}>{d}</td>
+                                                                                ))}
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    )
+                                                                )
+                                                            })
+                                                        }
+
+
+
+                                                        {/* <tbody>
+                                                            {
+                                                                data.map((item) => {
+                                                                    return (
+                                                                        
+                                                                    )
+                                                                })
+                                                            }
+
+
+
+                                                        </tbody> */}
+                                                    </table>
+
+                                                )}
+                                            </>
+                                        )
+                                    })
+                                }
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -234,6 +309,7 @@ const Wrapper = styled.div`
 
     td, tr {
         text-align: center;
+        cursor: pointer;
     }
 
     img {
@@ -251,7 +327,6 @@ const Wrapper = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-
         .row {
             height: 100px !important;
         }
@@ -269,6 +344,10 @@ const Wrapper = styled.div`
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
+    }
+
+    .modal-content {
+        border: none;
     }
     
 `
