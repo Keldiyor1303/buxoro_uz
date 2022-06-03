@@ -41,7 +41,7 @@ const Login = () => {
                                             <div className="mt-4 pt-2">
                                                 <div className="mb-3">
                                                     <label className="form-label">Foydalanuvchi nomi</label>
-                                                    <input onChange={(e) => setName(e.target.value)} type="text" className="form-control" placeholder="Enter username" />
+                                                    <input onChange={(e) => setName(e.target.value)} type="text" className="form-control" placeholder="Foydalanuvchi nomini kiriting" />
                                                 </div>
                                                 <div className="mb-3">
                                                     <div className="d-flex align-items-start">
@@ -51,7 +51,7 @@ const Login = () => {
                                                     </div>
 
                                                     <div className="input-group auth-pass-inputgroup">
-                                                        <input onChange={(e) => setPassword(e.target.value)} type={show ? "text" : "password"} className="form-control" placeholder="Enter password" aria-label="Password" aria-describedby="password-addon" />
+                                                        <input onChange={(e) => setPassword(e.target.value)} type={show ? "text" : "password"} className="form-control" placeholder="Parolni kiriting" aria-label="Password" aria-describedby="password-addon" />
                                                         <button onClick={() => setShow(!show)} className="btn btn-light shadow-none ms-0" type="button"><i className="mdi mdi-eye-outline"></i></button>
                                                     </div>
                                                 </div>

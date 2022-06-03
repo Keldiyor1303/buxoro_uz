@@ -13,7 +13,9 @@ const AdminViloyatHaqida = () => {
     const [ulRows, setUlRows] = useState(2)
     const [textarea, setTextarea] = useState("Text")
     const [todo, setTodo] = useState("Todo")
-    const [addedData, setAddedData] = useState([{ name: "textarea", title: "" }])
+    const [image, setImage] = useState(null)
+    const [gallery, setGallery] = useState([])
+    const [addedData, setAddedData] = useState([])
 
     document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
@@ -44,6 +46,9 @@ const AdminViloyatHaqida = () => {
             images: [image1, image1, image1, image1]
         },
     ]
+
+    console.log(image);
+    console.log(gallery);
 
     function added(element) {
         if (element === "textarea") {
@@ -226,8 +231,16 @@ const AdminViloyatHaqida = () => {
                                     <div style={{ width: "100%" }}>
                                         <label>Sarlavha rasmi</label>
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="customFile" />
-                                            <label class="custom-file-label" for="customFile">Rasm tanlash</label>
+                                            <input type="file" onChange={(e) => setImage(e.target.files[0])} class="custom-file-input" id="customFile" />
+                                            <label class="custom-file-label" for="customFile">{image ? "Rasm tanlandi" : "Rasm tanlash"}</label>
+                                        </div>
+                                    </div>
+
+                                    <div style={{ width: "100%" }}>
+                                        <label>Sarlavha rasmi</label>
+                                        <div class="custom-file">
+                                            <input type="file" multiple onChange={(e) => setGallery(e.target.files)} class="custom-file-input" id="customFile" />
+                                            <label class="custom-file-label" for="customFile">{gallery.length > 0 ? gallery.length + " ta rasm tanlandi" : "Rasm tanlash"}</label>
                                         </div>
                                     </div>
 
@@ -283,11 +296,11 @@ const AdminViloyatHaqida = () => {
                                         return (
                                             <>
                                                 {element.name === "textarea" && (
-                                                    <textarea onChange={(e) => ozgartir2(e.target.value, indexData)} rows="3" cols="3" class="form-control my-3" defaultValue={textarea}></textarea>
+                                                    <textarea onChange={(e) => ozgartir2(e.target.value, indexData)} rows="3" cols="3" class="form-control mb-3" defaultValue={textarea}></textarea>
                                                 )}
 
                                                 {element.name === "table" && (
-                                                    <table class="table bg-white datatable-colvis-basic table-hover border table-bordered my-3">
+                                                    <table class="table bg-white datatable-colvis-basic table-hover border table-bordered mb-3">
                                                         {
                                                             element?.tableData.map((malumot, index) => {
                                                                 return (
@@ -321,7 +334,7 @@ const AdminViloyatHaqida = () => {
                                                 )}
 
                                                 {element.name === "ul" && (
-                                                    <div className="card card-body bg-white my-3 p-2" style={{ borderRadius: "0" }}>
+                                                    <div className="card card-body bg-white mb-3 p-2" style={{ borderRadius: "0" }}>
                                                         <div className="list-feed">
                                                             {
                                                                 element?.ulData.map((malumot, index2) => {
@@ -338,15 +351,22 @@ const AdminViloyatHaqida = () => {
                                                 )}
 
                                                 {element.name === "todo" && (
-                                                    <div class="card border-left-3 bg-white border-left-primary rounded-left-0 my-3">
+                                                    <div class="card border-left-3 bg-white border-left-primary rounded-left-0 mb-3">
                                                         <textarea onChange={(e) => ozgartir2(e.target.value, indexData)} style={{ padding: "8px", border: "none", width: "100%", outline: "none", backgroundColor: "transparent", textAlign: "star" }} defaultValue={todo}></textarea>
                                                     </div>
                                                 )}
+
                                             </>
                                         )
                                     })
                                 }
                             </div>
+
+
+                            {addedData.length >= 1 && <div className='px-3'>
+                                <button className='btn btn-primary mb-3 w-100'>Natijani ko'rish</button>
+                            </div>}
+
 
                         </div>
                     </div>
