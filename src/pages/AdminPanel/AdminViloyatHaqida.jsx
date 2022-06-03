@@ -7,8 +7,12 @@ import image1 from "../../images/sport majmuasi.jpg"
 const AdminViloyatHaqida = () => {
     const [show, setShow] = useState(false)
     const [showTableParam, setShowTableParam] = useState(false)
+    const [showUlParam, setShowUlParam] = useState(false)
     const [cols, setCols] = useState(2)
     const [rows, setRows] = useState(2)
+    const [ulRows, setUlRows] = useState(2)
+    const [textarea, setTextarea] = useState("Text")
+    const [todo, setTodo] = useState("Todo")
     const [addedData, setAddedData] = useState([{ name: "textarea", title: "" }])
 
     document.addEventListener("keydown", function (e) {
@@ -43,7 +47,7 @@ const AdminViloyatHaqida = () => {
 
     function added(element) {
         if (element === "textarea") {
-            setAddedData([...addedData, { name: "textarea", title: "" }])
+            setAddedData([...addedData, { name: "textarea", title: "Text" }])
         }
 
         if (element === "table") {
@@ -61,6 +65,19 @@ const AdminViloyatHaqida = () => {
 
             setCols(2);
             setRows(2)
+        }
+
+        if (element === "ul") {
+            let arr = [];
+            for (let i = 0; i < ulRows; i++) {
+                arr.push(`item${i + 1}`)
+            }
+
+            setAddedData([...addedData, { name: "ul", ulData: arr }])
+        }
+
+        if (element === "todo") {
+            setAddedData([...addedData, { name: "todo", title: "Todo" }])
         }
     }
 
@@ -83,6 +100,40 @@ const AdminViloyatHaqida = () => {
 
         setAddedData(faceData)
     }
+
+    function ozgartir2(title, indexData) {
+        let faceData = addedData.filter((element, indexx1) => {
+            if (indexData === indexx1) {
+                element.title = title
+            }
+
+            return element
+        })
+
+        setAddedData(faceData)
+
+        setTextarea("Text")
+        setTodo("Todo")
+    }
+
+    function ozgartir3(title, indexData, index2) {
+        console.log(title, indexData, index2);
+        let faceData = addedData.filter((element, indexx1) => {
+            if (indexData === indexx1) {
+                console.log(indexx1);
+                element.ulData[index2] = title
+            }
+            return element
+
+        })
+
+
+        setAddedData(faceData)
+
+        setTodo("Todo")
+    }
+
+
 
     console.log(addedData);
 
@@ -159,7 +210,7 @@ const AdminViloyatHaqida = () => {
             {show && <div className='modall'>
                 <div style={{ width: "100%", minHeight: "90vh", maxHeight: "90vh", overflowY: "auto" }}>
                     <div class="modal-dialog modal-full">
-                        <div class="modal-content">
+                        <div class="modal-content" style={{ backgroundColor: "#F4F4F4" }}>
                             <div class="modal-header bg-primary text-white">
                                 <h5 class="modal-title">QO'SHISH</h5>
                                 <button onClick={() => setShow(false)} type="button" class="close" data-dismiss="modal"><i className='icon-cross2'></i></button>
@@ -183,7 +234,9 @@ const AdminViloyatHaqida = () => {
                                 </div>
 
                                 <div style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
+
                                     <button onClick={() => added("textarea")} className='btn btn-primary w-100'>Textarea</button>
+
                                     <div className='w-100'>
                                         <button onClick={() => setShowTableParam(!showTableParam)} className='btn btn-primary w-100'>Table</button>
 
@@ -202,8 +255,24 @@ const AdminViloyatHaqida = () => {
                                             </div>
                                         </div>}
                                     </div>
-                                    <button className='btn btn-primary w-100'>Ro'yxat</button>
-                                    <button className='btn btn-primary w-100'>Eslatma</button>
+
+                                    <div className='w-100'>
+                                        <button onClick={() => setShowUlParam(!showUlParam)} className='btn btn-primary w-100'>Ro`yxat</button>
+
+                                        {showUlParam && <div class="col-lg-12" style={{ backgroundColor: "#F4F4F4", padding: "16px" }}>
+                                            <div class="col-lg-12">
+                                                <label>Malumotlar soni:</label>
+                                                <input onChange={(e) => setUlRows(e.target.value)} type="number" placeholder="2" class="form-control" defaultValue={2} />
+                                            </div>
+
+                                            <div class="col-lg-12 mt-2">
+                                                <button onClick={() => { added("ul"); setShowUlParam(false) }} className='btn btn-primary w-100'>qo`shish</button>
+                                            </div>
+                                        </div>}
+                                    </div>
+
+                                    <button className='btn btn-primary w-100' onClick={() => added("todo")}>Eslatma</button>
+
                                     <button className='btn btn-primary w-100'>Rasm</button>
                                 </div>
                             </div>
@@ -214,11 +283,11 @@ const AdminViloyatHaqida = () => {
                                         return (
                                             <>
                                                 {element.name === "textarea" && (
-                                                    <textarea rows="3" cols="3" class="form-control my-2" placeholder="Default textarea"></textarea>
+                                                    <textarea onChange={(e) => ozgartir2(e.target.value, indexData)} rows="3" cols="3" class="form-control my-3" defaultValue={textarea}></textarea>
                                                 )}
 
                                                 {element.name === "table" && (
-                                                    <table class="table datatable-colvis-basic table-hover border mb-2">
+                                                    <table class="table bg-white datatable-colvis-basic table-hover border table-bordered my-3">
                                                         {
                                                             element?.tableData.map((malumot, index) => {
                                                                 return (
@@ -226,7 +295,9 @@ const AdminViloyatHaqida = () => {
                                                                         <thead key={index}>
                                                                             <tr>
                                                                                 {Object.values(malumot).map((d, index2) => (
-                                                                                    <th contenteditable="true" onKeyUp={(e) => ozgartir(e.target.textContent, indexData, index, index2)}>{d}</th>
+                                                                                    <th key={index2}>
+                                                                                        <input style={{ border: "none", width: "100%", outline: "none", backgroundColor: "transparent", textAlign: "center" }} onChange={(e) => ozgartir(e.target.value, indexData, index, index2)} defaultValue={d}></input>
+                                                                                    </th>
                                                                                 ))}
 
                                                                             </tr>
@@ -235,7 +306,9 @@ const AdminViloyatHaqida = () => {
                                                                         <tbody>
                                                                             <tr key={index}>
                                                                                 {Object.values(malumot).map((d, index2) => (
-                                                                                    <td contenteditable="true" onKeyUp={(e) => ozgartir(e.target.textContent, indexData, index, index2)}>{d}</td>
+                                                                                    <td key={index2}>
+                                                                                        <textarea style={{ border: "none", width: "100%", outline: "none", backgroundColor: "transparent", textAlign: "center" }} onChange={(e) => ozgartir(e.target.value, indexData, index, index2)} defaultValue={d}></textarea>
+                                                                                    </td>
                                                                                 ))}
                                                                             </tr>
                                                                         </tbody>
@@ -243,23 +316,31 @@ const AdminViloyatHaqida = () => {
                                                                 )
                                                             })
                                                         }
+                                                    </table>
 
+                                                )}
 
-
-                                                        {/* <tbody>
+                                                {element.name === "ul" && (
+                                                    <div className="card card-body bg-white my-3 p-2" style={{ borderRadius: "0" }}>
+                                                        <div className="list-feed">
                                                             {
-                                                                data.map((item) => {
+                                                                element?.ulData.map((malumot, index2) => {
                                                                     return (
-                                                                        
+                                                                        <div className="list-feed-item">
+                                                                            <input onChange={(e) => ozgartir3(e.target.value, indexData, index2)} defaultValue={malumot} style={{ border: "none", width: "100%", outline: "none", backgroundColor: "transparent", textAlign: "star" }} ></input>
+                                                                        </div>
                                                                     )
                                                                 })
                                                             }
+                                                        </div>
+                                                    </div>
 
+                                                )}
 
-
-                                                        </tbody> */}
-                                                    </table>
-
+                                                {element.name === "todo" && (
+                                                    <div class="card border-left-3 bg-white border-left-primary rounded-left-0 my-3">
+                                                        <textarea onChange={(e) => ozgartir2(e.target.value, indexData)} style={{ padding: "8px", border: "none", width: "100%", outline: "none", backgroundColor: "transparent", textAlign: "star" }} defaultValue={todo}></textarea>
+                                                    </div>
                                                 )}
                                             </>
                                         )
