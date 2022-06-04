@@ -8,6 +8,7 @@ const AdminViloyatHaqida = () => {
     const [show, setShow] = useState(false)
     const [showTableParam, setShowTableParam] = useState(false)
     const [showUlParam, setShowUlParam] = useState(false)
+    const [natija, setNatija] = useState(false)
     const [cols, setCols] = useState(2)
     const [rows, setRows] = useState(2)
     const [ulRows, setUlRows] = useState(2)
@@ -16,6 +17,7 @@ const AdminViloyatHaqida = () => {
     const [image, setImage] = useState(null)
     const [gallery, setGallery] = useState([])
     const [addedData, setAddedData] = useState([])
+
 
     document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
@@ -84,6 +86,10 @@ const AdminViloyatHaqida = () => {
         if (element === "todo") {
             setAddedData([...addedData, { name: "todo", title: "Todo" }])
         }
+
+        if (element === "image") {
+            setAddedData([...addedData, { name: "image", image: null }])
+        }
     }
 
     function ozgartir(num, indexData, index, index2) {
@@ -131,11 +137,19 @@ const AdminViloyatHaqida = () => {
             return element
 
         })
-
-
         setAddedData(faceData)
 
         setTodo("Todo")
+    }
+
+    function ozgartir4(image, indexData) {
+        let faceData = addedData.filter((element, indexx1) => {
+            if (indexx1 === indexData) {
+                element.image = image
+            }
+            return element
+        })
+        setAddedData(faceData)
     }
 
 
@@ -162,7 +176,7 @@ const AdminViloyatHaqida = () => {
                         <div class="tab-pane fade show active" id="solid-justified-tab1">
                             <Zoom bottom>
                                 <div class="card">
-                                    <table class="table datatable-colvis-basic table-hover">
+                                    <table class="table datatable-colvis-basic table-hover table-bordered">
                                         <thead>
                                             <tr>
                                                 <th style={{ width: "20%" }}>Rasm</th>
@@ -237,10 +251,10 @@ const AdminViloyatHaqida = () => {
                                     </div>
 
                                     <div style={{ width: "100%" }}>
-                                        <label>Sarlavha rasmi</label>
+                                        <label>Rasmlar galeriyasi</label>
                                         <div class="custom-file">
                                             <input type="file" multiple onChange={(e) => setGallery(e.target.files)} class="custom-file-input" id="customFile" />
-                                            <label class="custom-file-label" for="customFile">{gallery.length > 0 ? gallery.length + " ta rasm tanlandi" : "Rasm tanlash"}</label>
+                                            <label class="custom-file-label" for="customFile">{gallery.length > 0 ? gallery.length + " ta rasm tanlandi" : "Rasmlar tanlash"}</label>
                                         </div>
                                     </div>
 
@@ -286,7 +300,7 @@ const AdminViloyatHaqida = () => {
 
                                     <button className='btn btn-primary w-100' onClick={() => added("todo")}>Eslatma</button>
 
-                                    <button className='btn btn-primary w-100'>Rasm</button>
+                                    <button className='btn btn-primary w-100' onClick={() => added("image")}>Rasm</button>
                                 </div>
                             </div>
 
@@ -356,6 +370,18 @@ const AdminViloyatHaqida = () => {
                                                     </div>
                                                 )}
 
+                                                {element.name === "image" && (
+                                                    <div className='mb-3' style={{ width: "100%" }}>
+                                                        <label>Rasmni tanlang</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" onChange={(e) => ozgartir4(e.target.files[0], indexData)} class="custom-file-input" id="customFile" />
+                                                            <label class="custom-file-label" for="customFile">{image ? "Rasm tanlandi" : "Rasm tanlash"}</label>
+                                                        </div>
+                                                    </div>
+                                                )
+
+                                                }
+
                                             </>
                                         )
                                     })
@@ -364,7 +390,84 @@ const AdminViloyatHaqida = () => {
 
 
                             {addedData.length >= 1 && <div className='px-3'>
-                                <button className='btn btn-primary mb-3 w-100'>Natijani ko'rish</button>
+                                <button onClick={() => setNatija(!natija)} className='btn btn-primary mb-3 w-100'>Natijani ko'rish</button>
+                            </div>}
+
+                            {natija && <div className='px-3'>
+                                {
+                                    addedData.map((element, indexData) => {
+                                        return (
+                                            <>
+                                                {element.name === "textarea" && (
+                                                    <p class="mb-3">{element.title}</p>
+                                                )}
+
+                                                {element.name === "table" && (
+                                                    <table class="table bg-white datatable-colvis-basic table-hover border table-bordered mb-3">
+                                                        {
+                                                            element?.tableData.map((malumot, index) => {
+                                                                return (
+                                                                    index === 0 ? (
+                                                                        <thead key={index}>
+                                                                            <tr>
+                                                                                {Object.values(malumot).map((d, index2) => (
+                                                                                    <th key={index2}> {d} </th>
+                                                                                ))}
+
+                                                                            </tr>
+                                                                        </thead>
+                                                                    ) : (
+                                                                        <tbody>
+                                                                            <tr key={index}>
+                                                                                {Object.values(malumot).map((d, index2) => (
+                                                                                    <td key={index2}> {d} </td>
+                                                                                ))}
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    )
+                                                                )
+                                                            })
+                                                        }
+                                                    </table>
+
+                                                )}
+
+                                                {element.name === "ul" && (
+                                                    <div className="card card-body mb-3 p-2" style={{ border: "none" }}>
+                                                        <div className="list-feed" >
+                                                            {
+                                                                element?.ulData.map((malumot, index2) => {
+                                                                    return (
+                                                                        <div className="list-feed-item">
+                                                                            <p>{malumot}</p>
+                                                                        </div>
+                                                                    )
+                                                                })
+                                                            }
+                                                        </div>
+                                                    </div>
+
+                                                )}
+
+                                                {element.name === "todo" && (
+                                                    <div class="card border-left-3 bg-white border-left-primary rounded-left-0 mb-3 d-flex align-items-star justify-content-center p-2">
+                                                        <p className='m-0 p-0' style={{ textAlign: "justify" }}>{element.title}</p>
+                                                    </div>
+                                                )}
+
+                                                {element.name === "image" && (
+                                                    <div className='mb-3'>
+                                                        <img src={element.image.name} alt="" />
+
+                                                    </div>
+                                                )
+
+                                                }
+
+                                            </>
+                                        )
+                                    })
+                                }
                             </div>}
 
 
@@ -450,5 +553,16 @@ const Wrapper = styled.div`
     .modal-content {
         border: none;
     }
+
+    .list-feed-item:before {
+        border: 2px solid  #2196F3;
+        background-color:  #2196F3;
+    }
     
+    .list-feed-item:after {
+        border-left: 1px solid #2196F3;
+    border-right: 1px solid #2196F3;
+    }
+
+
 `

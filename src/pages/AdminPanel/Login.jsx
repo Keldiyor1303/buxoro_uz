@@ -84,10 +84,6 @@ const Login = () => {
                                     <li></li>
                                     <li></li>
                                     <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
                                 </ul>
                                 {/* <div className="row justify-content-center align-items-center">
                                     <div className="col-xl-7">
