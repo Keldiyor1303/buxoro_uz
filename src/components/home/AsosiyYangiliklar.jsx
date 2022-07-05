@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import hokimImg from "../../images/hokim.png"
+import hokimImg from "../../images/hokim.jpg"
 import d1 from "../../images/dolzarb.jpg"
 import d2 from "../../images/d2.jpg"
 import d3 from "../../images/d3.jpg"
@@ -31,7 +31,7 @@ const AsosiyYangiliklar = () => {
 
                                     <div className="card-footer bg-secondary m-0 p-0 d-flex justify-content-center align-items-center position-relative"
                                         style={{ height: "70px" }}>
-                                        <h2 className="font-weight-semibold text-light text-center m-0">Zaripov Botir Komilovich</h2>
+                                        <h2 className="font-weight-semibold text-light text-center m-0">Raxmatov Keldiyor</h2>
                                     </div>
                                 </div>
                             </div>

@@ -1,46 +1,59 @@
 import React, { useEffect, useState } from 'react';
 import { Zoom } from 'react-reveal';
 import styled from 'styled-components';
+import API from '../../utils/config';
 
 import s1 from "../../images/s1.jpg"
 import s2 from "../../images/s2.jpg"
 
 
-const data1 = [
-    {
-        id: 0,
-        rasmi: s1,
-        ismiFamiliyasi: "ZARIPOV BOTIR KOMILOVICH",
-        lavozimi: "Buxoro viloyat hokimi",
-        Partiyaviyligi: "-",
-        TugilganYili: "20-11-1969",
-        TugilganJoyi: "G`ijduvon tumani",
-        Millati: "O`zbek",
-        Malumoti: "Oliy",
-        TelefonRaqami: "-",
-        isShow: false,
-        isShow2: false,
+// const data1 = [
+//     {
+//         id: 0,
+//         rasmi: s1,
+//         ismiFamiliyasi: "ZARIPOV BOTIR KOMILOVICH",
+//         lavozimi: "Buxoro viloyat hokimi",
+//         Partiyaviyligi: "-",
+//         TugilganYili: "20-11-1969",
+//         TugilganJoyi: "G`ijduvon tumani",
+//         Millati: "O`zbek",
+//         Malumoti: "Oliy",
+//         TelefonRaqami: "-",
+//         isShow: false,
+//         isShow2: false,
 
-    },
-    {
-        id: 1,
-        rasmi: s2,
-        ismiFamiliyasi: "Temirova Dilnora",
-        lavozimi: "Buxoro viloyat xotin-qizlar",
-        Partiyaviyligi: "-",
-        TugilganYili: "20-11-1969",
-        TugilganJoyi: "G`ijduvon tumani",
-        Millati: "O`zbek",
-        Malumoti: "Oliy",
-        TelefonRaqami: "-",
-        isShow: false,
-        isShow2: false,
-    },
-]
+//     },
+//     {
+//         id: 1,
+//         rasmi: s2,
+//         ismiFamiliyasi: "Temirova Dilnora",
+//         lavozimi: "Buxoro viloyat xotin-qizlar",
+//         Partiyaviyligi: "-",
+//         TugilganYili: "20-11-1969",
+//         TugilganJoyi: "G`ijduvon tumani",
+//         Millati: "O`zbek",
+//         Malumoti: "Oliy",
+//         TelefonRaqami: "-",
+//         isShow: false,
+//         isShow2: false,
+//     },
+// ]
+
 
 
 
 const Rahbariyat = () => {
+
+    const [data1, setData1] = useState([])
+
+    useEffect(() => {
+        API.get(`api/admin_panel/manegemnt_views/`)
+            .then(res => {
+                console.log(res.data);
+                setData1(res.data)
+            })
+    }, [])
+
 
     const [data, setData] = useState([])
 
@@ -82,45 +95,45 @@ const Rahbariyat = () => {
                     return (
                         <div style={{ backgroundColor: "#fff", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
                             <div key={item.id} className='d-flex gap-2 senatorlar p-2 mt-2'>
-                                <img src={item.rasmi} alt="" style={{ width: "250px", height: "300px", objectFit: "cover" }} />
+                                <img src={`http://192.168.0.166:8000${item.img}`} alt="" style={{ width: "250px", height: "300px", objectFit: "cover" }} />
 
                                 <div style={{ width: "100%", height: "300px", backgroundColor: "white" }}>
-                                    <div className="p-2 text-light bg-secondary" style={{ fontSize: "18px" }}>{item.ismiFamiliyasi}</div>
+                                    <div className="p-2 text-light bg-secondary" style={{ fontSize: "18px" }}>{item.full_name}</div>
 
                                     <div className="list-group" style={{ border: "none" }}>
                                         <li className="list-group-item list-group-item-action px-2 py-1 d-flex">
                                             <span>Lavozimi</span>
-                                            <span>{item.lavozimi}</span>
+                                            <span>{item.position}</span>
                                         </li>
 
-                                        <li className="list-group-item list-group-item-action px-2 py-1 d-flex">
+                                        {/* <li className="list-group-item list-group-item-action px-2 py-1 d-flex">
                                             <span>Partiyaviyligi</span>
                                             <span>{item.Partiyaviyligi}</span>
-                                        </li>
+                                        </li> */}
 
                                         <li className="list-group-item list-group-item-action px-2 py-1 d-flex">
                                             <span>Tug'ilgan yili</span>
-                                            <span>{item.TugilganYili}</span>
+                                            <span>{item.date_birth_day}</span>
                                         </li>
 
                                         <li className="list-group-item list-group-item-action px-2 py-1 d-flex">
                                             <span>Tug'ilgan joyi</span>
-                                            <span>{item.TugilganJoyi}</span>
+                                            <span>{item.place_of_birth}</span>
                                         </li>
 
                                         <li className="list-group-item list-group-item-action px-2 py-1 d-flex">
                                             <span>Millati</span>
-                                            <span>{item.Millati}</span>
+                                            <span>{item.millat}</span>
                                         </li>
 
                                         <li className="list-group-item list-group-item-action px-2 py-1 d-flex">
                                             <span>Ma'lumoti</span>
-                                            <span>{item.Malumoti}</span>
+                                            <span>{item.information}</span>
                                         </li>
 
                                         <li className="list-group-item list-group-item-action px-2 py-1 d-flex">
                                             <span>Telefon raqami</span>
-                                            <span>{item.TelefonRaqami}</span>
+                                            <span>{item.phone_number}</span>
                                         </li>
                                     </div>
                                 </div>
@@ -131,55 +144,7 @@ const Rahbariyat = () => {
                                 Qo`shimcha ma`lumot</div>
                             {
                                 item.isShow && <Zoom bottom>
-                                    <div className="list-feed p-3">
-                                        <div className="list-feed-item">
-                                            <a href="/">David Linner</a> requested refund for a double bank card charge
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            User <a href="/">Christopher Wallace</a> from Google is awaiting for staff reply
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            Ticket <strong>#43683</strong> has been resolved by <a href="/">Victoria Wilson</a>
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            <a href="/">Eugene Kopyov</a> merged <strong>Master</strong>, <strong>Demo</strong> and <strong>Dev</strong> branches
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            All sellers have received payouts for December, 2016!
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            <a href="/">Chris Arney</a> created a new ticket <strong>#43136</strong> and assigned to <a href="/">John Nod</a>
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            <a href="/">David Linner</a> requested refund for a double bank card charge
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            User <a href="/">Christopher Wallace</a> from Google is awaiting for staff reply
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            Ticket <strong>#43683</strong> has been resolved by <a href="/">Victoria Wilson</a>
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            <a href="/">Eugene Kopyov</a> merged <strong>Master</strong>, <strong>Demo</strong> and <strong>Dev</strong> branches
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            All sellers have received payouts for December, 2016!
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            <a href="/">Chris Arney</a> created a new ticket <strong>#43136</strong> and assigned to <a href="/">John Nod</a>
-                                        </div>
-                                    </div>
+                                    <span className='p-3 text-secondary' style={{ fontSize: "18px" }}>{item.informations}</span>
                                 </Zoom>
                             }
 
@@ -187,55 +152,7 @@ const Rahbariyat = () => {
                                 {item.isShow2 ? <i className='icon-arrow-down15'></i> : <i className='icon-arrow-right15'></i>}Funksiya va vazifalari</div>
                             {
                                 item.isShow2 && <Zoom bottom>
-                                    <div className="list-feed p-3">
-                                        <div className="list-feed-item">
-                                            <a href="/">David Linner</a> requested refund for a double bank card charge
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            User <a href="/">Christopher Wallace</a> from Google is awaiting for staff reply
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            Ticket <strong>#43683</strong> has been resolved by <a href="/">Victoria Wilson</a>
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            <a href="/">Eugene Kopyov</a> merged <strong>Master</strong>, <strong>Demo</strong> and <strong>Dev</strong> branches
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            All sellers have received payouts for December, 2016!
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            <a href="/">Chris Arney</a> created a new ticket <strong>#43136</strong> and assigned to <a href="/">John Nod</a>
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            <a href="/">David Linner</a> requested refund for a double bank card charge
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            User <a href="/">Christopher Wallace</a> from Google is awaiting for staff reply
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            Ticket <strong>#43683</strong> has been resolved by <a href="/">Victoria Wilson</a>
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            <a href="/">Eugene Kopyov</a> merged <strong>Master</strong>, <strong>Demo</strong> and <strong>Dev</strong> branches
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            All sellers have received payouts for December, 2016!
-                                        </div>
-
-                                        <div className="list-feed-item">
-                                            <a href="/">Chris Arney</a> created a new ticket <strong>#43136</strong> and assigned to <a href="/">John Nod</a>
-                                        </div>
-                                    </div>
+                                    <span className='p-3 text-secondary' style={{ fontSize: "18px" }}>{item.function}</span>
                                 </Zoom>
                             }
                         </div>

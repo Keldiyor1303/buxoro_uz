@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 
@@ -46,6 +46,9 @@ const Sidebar = () => {
             url: "/admin/korrupsiyaga_qarshi_kurashish"
         },
     ]
+
+    const navigate = useNavigate()
+
     return (
         <Wrapper>
             <ul>
@@ -62,6 +65,9 @@ const Sidebar = () => {
 
             </ul>
 
+            <button className='btn btn-danger' onClick={() => { localStorage.clear(); navigate("/login") }}>Chiqish</button>
+
+
         </Wrapper >
     );
 }
@@ -73,6 +79,11 @@ const Wrapper = styled.div`
     width: 250px !important;
     min-width: 250px !important;
     background-color: #FBFAFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 8px;
+
     
     
     ul {
@@ -91,5 +102,9 @@ const Wrapper = styled.div`
     a.active {
         color: #2196F3 !important;
         font-weight: 500;
+    }
+
+    button {
+
     }
 `

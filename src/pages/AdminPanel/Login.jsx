@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import logo from "../../images/sektor-1.png"
+import API from '../../utils/config';
 
 const Login = () => {
     const [show, setShow] = useState(false)
@@ -12,13 +13,26 @@ const Login = () => {
     const navigate = useNavigate()
 
     function login() {
-        if (name === "keldiyor" && password === "13032003") {
-            navigate("/admin/viloyat_haqida")
-        } else {
-            console.log("ishlamadi");
-        }
+        // if (name === "keldiyor" && password === "13032003") {
+        //     navigate("/admin/viloyat_haqida")
+        // } else {
+        //     console.log("ishlamadi");
+        // }
 
+        API.post("api/admin_panel/user_login_views/", {
+            username: name,
+            password: password
+        }).then(res => {
+            localStorage.setItem("token", res.data.token.accsess);
+            localStorage.setItem("username", name);
+            localStorage.setItem("password", password);
+            navigate("/admin/viloyat_haqida")
+        }
+        )
     }
+
+
+
 
     return (
         <Wrapper>

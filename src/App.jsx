@@ -140,13 +140,13 @@ function App() {
 
       {/* ADMIN PANEL */}
       <Route path="/login" element={<Login />} />
-      <Route path="/admin/viloyat_haqida" element={<LayoutAdmin><AdminViloyatHaqida /></LayoutAdmin>} />
-      <Route path="/admin/hokimlik_togrisida" element={<LayoutAdmin><AdminHokimlikTogrisida /></LayoutAdmin>} />
-      <Route path="/admin/hokimlik_faoliyati" element={<LayoutAdmin><AdminHokimlikFaoliyatlari /></LayoutAdmin>} />
-      <Route path="/admin/hujjatlar" element={<LayoutAdmin><AdminHujjatlar /></LayoutAdmin>} />
-      <Route path="/admin/mediateka" element={<LayoutAdmin><AdminMediateka /></LayoutAdmin>} />
-      <Route path="/admin/axborot_xizmati" element={<LayoutAdmin><AdminAxborotXizmati /></LayoutAdmin>} />
-      <Route path="/admin/mahalliylashtirish" element={<LayoutAdmin><AdminMahalliylashtirish /></LayoutAdmin>} />
+      <Route path="/admin/viloyat_haqida" element={localStorage.getItem("token") ? <LayoutAdmin><AdminViloyatHaqida /></LayoutAdmin> : <Login />} />
+      <Route path="/admin/hokimlik_togrisida" element={localStorage.getItem("token") ? <LayoutAdmin><AdminHokimlikTogrisida /></LayoutAdmin> : <Login />} />
+      <Route path="/admin/hokimlik_faoliyati" element={localStorage.getItem("token") ? <LayoutAdmin><AdminHokimlikFaoliyatlari /></LayoutAdmin> : <Login />} />
+      <Route path="/admin/hujjatlar" element={localStorage.getItem("token") ? <LayoutAdmin><AdminHujjatlar /></LayoutAdmin> : <Login />} />
+      <Route path="/admin/mediateka" element={localStorage.getItem("token") ? <LayoutAdmin><AdminMediateka /></LayoutAdmin> : <Login />} />
+      <Route path="/admin/axborot_xizmati" element={localStorage.getItem("token") ? <LayoutAdmin><AdminAxborotXizmati /></LayoutAdmin> : <Login />} />
+      <Route path="/admin/mahalliylashtirish" element={localStorage.getItem("token") ? <LayoutAdmin><AdminMahalliylashtirish /></LayoutAdmin> : <Login />} />
 
     </Routes>
   );
